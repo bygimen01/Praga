@@ -1,0 +1,37 @@
+nav {
+    transform: translateY(-105px);
+    height: 320px;
+}
+
+.about-us-header-logo svg{
+    transform: translateY(-60px);
+}
+
+.about-nav {
+    transform: translateY(58px);
+}
+
+.about-nav ul{
+    width: 1200px;
+    transform: translateX(13%);
+}
+
+.about-us-block-page{
+    margin-top: -100px;
+}
+
+.apartments-nav-social-media{
+    transform: translateX(30px)
+}
+
+.language{
+    transform: translateX(100px);
+}
+
+.language img{
+    transform: translate(10px, 5px);
+}
+
+.about-us-nav-title {
+    transform: translateY(90px);
+}

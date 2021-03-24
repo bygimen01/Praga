@@ -1,0 +1,542 @@
+@media (min-width: 1210px) {
+    .mobile-searching{
+        display: none;
+    }
+}
+
+@media (max-width: 830px) {
+    #next_apart{
+        right: 40% !important;
+    }
+
+    #before_apart{
+        left: 40% !important;
+    }
+}
+
+@media (max-width: 1225px) {
+    .mobile-footer{
+        display: block;
+    }
+
+    #next_apart{
+        top: 830px !important;
+    }
+
+    #before_apart{
+        top: 830px !important;
+    }
+
+    .desctop-footer{
+        display: none;
+    }
+
+    .apartments-offers {
+        padding-left: 20px;
+        height: 390px;
+    }
+
+    .apartments-nav-wrapper{
+        display: none;
+    }
+
+    .apartments-title{
+        padding-top: 47px;
+    }
+
+    .apartments-title h1{
+        font-size: 30px;
+    }
+
+    .apartments-title-underline{
+        transform: translate(-50%, -15px);
+    }
+
+    .apartments-title p{
+        width: 372px;
+        font-size: 16px;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .designe-element svg{
+        height: 132px;
+        transform: translate(112px, -80px);
+    }
+
+    .offer-card{
+        width: 320px;
+        height: 360px;
+    }
+
+    .offer {
+        width: 320px;
+        height: 360px;
+    }
+    .offer-card-img{
+        width: 320px;
+        height: 260px;
+    }
+
+
+    .apartments-offers{
+        column-gap: 10px;
+        overflow: hidden;
+    }
+
+
+    .card-content-text p{
+        font-size: 18px !important;
+    }
+
+    .card-content-text ul li p{
+        font-size: 14px !important;
+    }
+
+    .card-price-title p{
+        font-size: 30px !important;
+    }
+
+    .card-price-per-night p{
+        font-size: 18px !important;
+    }
+
+    .about-us-content{
+        position: relative;
+        padding: 0px 20px;
+        padding-top: 410px;
+        text-align: center;
+    }
+
+    .about-us-block img{
+        /*object-fit: cover;*/
+        /*display: none;*/
+    }
+
+    .about-us-block {
+        background-image: url("img/about-us-bg-mobile.jpg");
+        height: 1045px;
+        padding-bottom: 250px;
+    }
+
+    .mobile_bg_about_us img{
+        display: block;
+        z-index: 0;
+        height: 410px;
+        width: auto;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    .about-us-content p{
+    text-align: left;
+    font-size: 16px;
+    width: 374px;
+    height: 280px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    }
+
+    .about-us-first-p {
+        width: 374px;
+        height: 121px !important;
+        font-size: 18px !important;
+        margin-bottom: 52px !important;
+    }
+
+    .about-us-content h1{
+        font-size: 30px;
+    }
+
+    .more-about-us-btn{
+        width: 374px;
+        margin-left: 50%;
+        transform: translate(-50%, 100px);
+    }
+
+    .find-us-info{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 640px) {
+    .find-us-info{
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 374px;
+        height: 375px;
+    }
+
+    .find-us-info .underline{
+        position: absolute;
+        right: 100%;
+        top: 110px;
+    }
+
+    .find-us-info h1{
+        font-size: 30px;
+    }
+
+    .find-us-info p{
+        font-size: 16px;
+        width: 293px;
+    }
+
+    .find-us-block{
+        height: 434px;
+    }
+
+    .find-us-info button{
+        width: 294px;
+        height: 50px;
+        color: #ED7180;
+        background: none;
+        border: 1px solid #ED7180;
+        border-radius: 5px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 970px) {
+
+    #opinions-left-arrow {
+        display: none
+    }
+    .opinions-card-wrapp{
+        display: flex;
+        column-gap: 50px;
+    }
+
+    .tip-offers-wrap {
+        column-gap: 15px;
+    }
+
+    .apartments-offers {
+        padding-left: 200px;
+        height: 390px;
+    }
+
+    .opinions-wrap{
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 414px;
+        padding-top: 20px;
+        overflow: hidden;
+    }
+
+    .opinions-wrap h1{
+        width: 130px;
+        font-size: 30px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .opinions-wrap .underline{
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 90px;
+    }
+
+    .opinions-wrap p{
+        font-size: 16px;
+        line-height: 30px;
+        height: 84px;
+        width: 374px;
+    }
+
+    .opinions-card{
+        height: 310px;
+        width: 100%;
+    }
+
+    .opinions-card-lside img{
+        height: 50px;
+        width: 50px;
+        transform: translate(-15px, 126px);
+    }
+
+    .opinions-card-title h2{
+        font-size: 18px;
+        margin-top: 31px;
+    }
+
+    .card-description p{
+        font-size: 14px;
+        width: 231px;
+        height: 157px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+
+    .card-autor p{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 1415px) {
+    #decoration svg{
+        height: 142px;
+        transform: translate(-200px, -30px);
+    }
+    .tip-offers{
+        overflow: visible;
+    }
+
+    .tip-for-trips-block{
+        padding-top: 40px;
+    }
+
+    .tip-title h1{
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .tip-description{
+        width: 372px;
+        height: 142px;
+        text-align: left;
+    }
+
+    .tip-description p{
+        font-size: 16px;
+    }
+
+    .product img{
+        width: 350px;
+        height: 260px;
+        object-fit: cover;
+    }
+
+    .product-title p{
+        font-size: 18px;
+    }
+
+    .product-description p{
+        font-size: 14px;
+        width: 271px;
+        height: 92px;
+    }
+
+    .product-content{
+        width: 320px;
+        height: 210px;
+
+    }
+
+    .product {
+        width: 350px;
+        height: 470px;
+    }
+
+    .arrow-product img{
+        height: 50px;
+        width: 50px;
+    }
+    .arrow-product {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+    }
+}
+
+
+@media (max-width: 965px) {
+    .tip-for-trips-block{
+    height: 1000px;
+}
+    #next_activ {
+        display: block;
+    }
+    .tip-offers-wrap{
+    flex-wrap: nowrap;
+}
+
+    .tip-offers-wrap {
+    justify-content: left;
+    padding-left: 20px;
+}
+
+}
+
+@media (max-width: 1648px) {
+    .apartments-offers{
+    flex-wrap: nowrap;
+    justify-content: left;
+    padding-left: 20px;
+}
+
+}
+
+@media (max-width: 1685px) {
+    .special-block-wrapper{
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+}
+
+@media (max-width: 1860px) {
+    #next_apart{
+        top: 915px;
+        right: 46%;
+    }
+
+    #before_apart{
+        top: 915px;
+        left: 46%;
+    }
+}
+
+@media (max-width: 700px) {
+    .special-offer{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+    .special-offer p{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 99;
+}
+
+    .special-offer p::after{
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+
+}
+
+    .special-block-wrapper{
+    row-gap: 0;
+}
+
+    .special-offer img{
+    width: 100%;
+    transform: translateY(-80px);
+    object-fit: cover;
+    height: auto;
+
+}
+
+    .middle {
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
+}
+
+    .middle-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    z-index: 99;
+}
+
+    .middle-content p{
+    position: static;
+    width: 100%;
+    text-align: center;
+    z-index: 99;
+}
+
+    .special-offer::after{
+    width: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 24px;
+}
+
+    .middle:hover::after{
+    transform: none;
+}
+
+    .middle-content p::after{
+    transform: translate(-40px, 30px);
+}
+
+    .middle-content span{
+    width: 330px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+}
+
+@media (max-width: 520px) {
+    .mobile_bg_about_us img{
+    z-index: 0;
+    height: auto;
+    width: 100%;
+}
+
+    .apartments-offers a{
+    height: 374px;
+}
+
+    .apartments-offers {
+    height: 390px;
+}
+
+    .apartments-wrapper {
+    padding-bottom: 30px;
+}
+
+    .about-us-content h1{
+    margin-top: 100px;
+}
+
+}
+
+@media (max-width: 1270px) {
+    .footer-content-wrap{
+    column-gap: 10px;
+    width: 940px;
+}
+
+    .content-vector {
+    width: 940px;
+}
+
+    .footer-copyright{
+    width: 940px;
+}
+}
+
+
+@media (max-width: 1700px) {
+    #next_apart{
+        top: 910px;
+        left: 52%;
+    }
+
+    #before_apart{
+        top: 910px;
+        left: 45%;
+    }
+}
+
+@media (max-width: 873px) {
+    #next_apart{
+        top: 820px;
+    }
+
+    #before_apart{
+        top: 820px;
+    }
+}

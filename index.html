@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Praga Apartments Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="medias.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <p class="header-p">We are open!</p>
+</header>
+<img src="img/Rectangle%201.jpg" alt="" class="bg-header" id="bg_header">
+<div class="container">
+    <div class="header__content-wrapper">
+        <img src="img/LOGO.svg" alt="" class="mob_logo">
+        <div class="header__nav">
+            <ul class="header_nav-li">
+                <li><a href="#">Apartments</a></li>
+                <li><a href="#">Restaurant</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><img src="img/LOGO.svg" alt="" class="header_logo"></li>
+                <li><a href="#">Tips for trips</a></li>
+                <li><a href="#">Special Offers</a></li>
+                <li class="contact"><a href="#">Contact</a></li>
+                <li>
+                    <div class="language">
+                        <button id="lang_btn" onclick="show_lg();">en</button><img src="img/sctrzalka.svg" alt="" onclick="show_lg();" id="lang_arrow">
+                        <ul id="lang_list">
+                            <li id="en" onclick="to_en();">en</li>
+                            <li id="ru" onclick="to_ru();">ru</li>
+                            <li id="de" onclick="to_de();">de</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="header__title">
+            <p class="title">
+                Take you breathe
+                in <bold>Zell am See - Kaprun</bold>
+            </p>
+        </div>
+
+        <div class="calendar-wrap" id="calendar-wrap">
+        </div>
+
+            <button  class="mobile-searching">Booking online</button>
+
+        <div class="searching__block" id="srch_btn_hd">
+            <div class="month" id="checkincalendar">
+                <div id="before_month" onclick="beforeMonth()">
+                    <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.9292 14L8.00029 7.92891L1.9292 1.85782" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                </div>
+                <p id="currentMonth"></p>
+                <div id="next_month" onclick="nextMonth()">
+                    <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.9292 14L8.00029 7.92891L1.9292 1.85782" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                </div>
+                <div id="calendar">
+                </div>
+            </div>
+
+            <div class="check-in searching-el" onclick="showCalendar();">
+                <p id="checkin" class="clndrbtn">15 January</p>
+                <img src="img/kalendarz.svg" alt="">
+            </div>
+            <div class="check-out searching-el" onclick="checkout();">
+                <p id="checkout" class="clndrbtn">20 January</p>
+                <img src="img/kalendarz.svg" alt="">
+            </div>
+            <div class="guests searching-el" onclick="showGuests();" id="gues">
+                <p id="numberofguests">2 guests</p>
+                <img src="img/guests.svg" alt="">
+
+                <ul class="guests-list" id="guests">
+                    <li class="guest">1 guest</li>
+                    <li class="guest">2 guests</li>
+                    <li class="guest">3 guests</li>
+                    <li class="guest">4 guests</li>
+                    <li class="guest">5+ guests</li>
+                </ul>
+            </div>
+            <div class="search-btn">
+                <div class="search-btn-content">
+                    <p>Search apartment</p>
+                    <img src="img/search.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="apartments-block">
+    <div class="apartments-wrapper" id="apartments">
+        <div class="apartments-nav-wrapper" id="nav_menu">
+            <div class="apartments-nav" id="apartments-nav">
+                <ul>
+                    <li><a href="#">Apartments</a></li>
+                    <li><a href="#">Restaurant</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Tips for trips</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="apartments-nav-social-media" id="apartments-nav-social-media">
+                    <a href="#"><img src="img/insta.svg" alt=""></a>
+                    <a href="#"><img src="img/fb.svg" alt=""></a>
+                </div>
+                <div class="booking-online-btn">
+                    <button id="booking-btn">Booking online</button>
+                </div>
+            </div>
+
+            <div class="apartments-nav-logo">
+                <img src="img/LOGO.svg" alt="">
+            </div>
+        </div>
+        <div class="designe-element">
+            <svg width="280" height="241" viewBox="0 0 280 241" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M835.897 21.7169L809.603 6.51928L786.956 26.7545L760.652 11.5579L738.005 31.7931L711.7 16.5965L689.063 36.8306L662.759 21.6341L640.112 41.8692L613.818 26.6716L591.17 46.9068L564.866 31.7102L542.219 51.9454L515.925 36.7478L493.278 56.983L466.983 41.7854L444.336 62.0206L418.032 46.824L395.385 67.0592L369.091 51.8616L346.443 72.0968L320.149 56.8992L297.502 77.1343L271.198 61.9378L248.551 82.1729L222.256 66.9753L199.609 87.2105L173.315 72.0129L150.658 92.2491L124.364 77.0515L101.716 97.2867L75.4221 82.0891L52.7749 102.324L26.4707 87.1277L3.82356 107.363" stroke="#ED7080" stroke-width="10" stroke-miterlimit="10"/>
+                <path d="M840.338 64.8585L814.044 49.6609L791.396 69.8961L765.092 54.6995L742.445 74.9347L716.141 59.7381L693.504 79.9722L667.199 64.7757L644.552 85.0108L618.258 69.8132L595.611 90.0484L569.307 74.8518L546.659 95.087L520.365 79.8894L497.718 100.125L471.424 84.927L448.777 105.162L422.472 89.9656L399.825 110.201L373.531 95.0032L350.884 115.238L324.59 100.041L301.942 120.276L275.638 105.079L252.991 125.315L226.697 110.117L204.05 130.352L177.755 115.155L155.098 135.391L128.804 120.193L106.157 140.428L79.8625 125.231L57.2154 145.466L30.9111 130.269L8.26399 150.504" stroke="#ED7080" stroke-width="10" stroke-miterlimit="10"/>
+                <path d="M844.779 108.001L818.484 92.8035L795.837 113.039L769.533 97.8421L746.886 118.077L720.582 102.881L697.944 123.115L671.64 107.918L648.993 128.153L622.699 112.956L600.052 133.191L573.748 117.994L551.1 138.23L524.806 123.032L502.159 143.267L475.865 128.07L453.217 148.305L426.913 133.108L404.266 153.343L377.972 138.146L355.325 158.381L329.03 143.183L306.383 163.419L280.079 148.222L257.432 168.457L231.138 153.26L208.491 173.495L182.196 158.297L159.539 178.533L133.245 163.336L110.598 183.571L84.3034 168.373L61.6563 188.608L35.3521 173.412L12.7049 193.647" stroke="#ED7080" stroke-width="10" stroke-miterlimit="10"/>
+                <path d="M849.219 151.143L822.925 135.945L800.278 156.18L773.974 140.984L751.326 161.219L725.022 146.022L702.385 166.256L676.081 151.06L653.434 171.295L627.139 156.097L604.492 176.333L578.188 161.136L555.541 181.371L529.247 166.174L506.599 186.409L480.305 171.211L457.658 191.446L431.354 176.25L408.707 196.485L382.412 181.287L359.765 201.523L333.471 186.325L310.824 206.56L284.519 191.364L261.872 211.599L235.578 196.401L212.931 216.636L186.637 201.439L163.98 221.675L137.685 206.477L115.038 226.712L88.7439 211.515L66.0967 231.75L39.7925 216.553L17.1453 236.789" stroke="#ED7080" stroke-width="10" stroke-miterlimit="10"/>
+            </svg>
+
+        </div>
+        <div class="apartments-title anim-item anim_no_hide">
+            <h1 class="anim-item anim_no_hide">Apartments</h1>
+
+            <div class="apartments-title-underline anim-item anim_no_hide">
+                <svg width="88" height="18" viewBox="0 0 88 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M85.678 14.0421L71.7326 4L57.7872 14.0421L43.8419 4L29.8965 14.0421L15.9454 4L2 14.0421" stroke="#262038" stroke-opacity="0.3" stroke-width="5" stroke-miterlimit="10"/>
+                </svg>
+            </div>
+
+            <p class="anim-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut laboredolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati laboris
+                <br>nisi ut aliquip ex ea commodo consequat uis aute irure dolor.</p>
+
+        </div>
+
+        <img src="img/arrow.svg" alt="" id="before_apart" onclick="before_apart(); clearInterval(clickerAartments);">
+
+        <div class="apartments-wrap">
+        <div class="apartments-offers anim-item anim_no_hide">
+            <a href="#" class="offer">
+                <div class="offer-card">
+                    <img src="img/Sommerski.jpg" alt="" class="offer-card-img">
+                    <div class="card-content">
+                        <div class="card-content-text">
+                            <p>Sommerski Rooms Apartments</p>
+                            <ul>
+                                <li><div class="card-info">
+                                    <div class="card-info-preview">
+                                        <img src="img/preview.svg" alt="">
+                                        <p>6</p>
+                                    </div>
+                                </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-bed">
+                                        <img src="img/bed.svg" alt="">
+                                        <p>2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-metr">
+                                        <img src="img/m2.svg" alt="">
+                                        <p>80 m2</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-price">
+                            <div class="card-price-title">
+                                <p>€55</p>
+                            </div>
+                            <div class="card-price-per-night">
+                                <p>/night</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="#" class="offer">
+                <div class="offer-card">
+                    <img src="img/Aplin.jpg" alt="" class="offer-card-img">
+                    <div class="card-content">
+                        <div class="card-content-text">
+                            <p>Aplin Apartments</p>
+                            <ul>
+                                <li><div class="card-info">
+                                    <div class="card-info-preview">
+                                        <img src="img/preview.svg" alt="">
+                                        <p>6</p>
+                                    </div>
+                                </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-bed">
+                                        <img src="img/bed.svg" alt="">
+                                        <p>2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-metr">
+                                        <img src="img/m2.svg" alt="">
+                                        <p>80 m2</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-price">
+                            <div class="card-price-title">
+                                <p>€45</p>
+                            </div>
+                            <div class="card-price-per-night">
+                                <p>/night</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+
+
+
+            <a href="#" class="offer">
+                <div class="offer-card">
+                    <img src="img/Gratbahn.jpg" alt="" class="offer-card-img">
+                    <div class="card-content">
+                        <div class="card-content-text">
+                            <p>Gratbahn Apartments</p>
+                            <ul>
+                                <li><div class="card-info">
+                                    <div class="card-info-preview">
+                                        <img src="img/preview.svg" alt="">
+                                        <p>6</p>
+                                    </div>
+                                </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-bed">
+                                        <img src="img/bed.svg" alt="">
+                                        <p>2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-metr">
+                                        <img src="img/m2.svg" alt="">
+                                        <p>80 m2</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-price">
+                            <div class="card-price-title">
+                                <p>€39</p>
+                            </div>
+                            <div class="card-price-per-night">
+                                <p>/night</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+
+
+
+            <a href="#" class="offer">
+                <div class="offer-card">
+                    <img src="img/Sommerski.jpg" alt="" class="offer-card-img">
+                    <div class="card-content">
+                        <div class="card-content-text">
+                            <p>Sommerski Rooms Apartments</p>
+                            <ul>
+                                <li><div class="card-info">
+                                    <div class="card-info-preview">
+                                        <img src="img/preview.svg" alt="">
+                                        <p>6</p>
+                                    </div>
+                                </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-bed">
+                                        <img src="img/bed.svg" alt="">
+                                        <p>2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-metr">
+                                        <img src="img/m2.svg" alt="">
+                                        <p>80 m2</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-price">
+                            <div class="card-price-title">
+                                <p>€55</p>
+                            </div>
+                            <div class="card-price-per-night">
+                                <p>/night</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="offer">
+                <div class="offer-card">
+                    <img src="img/Aplin.jpg" alt="" class="offer-card-img">
+                    <div class="card-content">
+                        <div class="card-content-text">
+                            <p>Aplin Apartments</p>
+                            <ul>
+                                <li><div class="card-info">
+                                    <div class="card-info-preview">
+                                        <img src="img/preview.svg" alt="">
+                                        <p>6</p>
+                                    </div>
+                                </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-bed">
+                                        <img src="img/bed.svg" alt="">
+                                        <p>2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-metr">
+                                        <img src="img/m2.svg" alt="">
+                                        <p>80 m2</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-price">
+                            <div class="card-price-title">
+                                <p>€45</p>
+                            </div>
+                            <div class="card-price-per-night">
+                                <p>/night</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="offer">
+                <div class="offer-card">
+                    <img src="img/Gratbahn.jpg" alt="" class="offer-card-img">
+                    <div class="card-content">
+                        <div class="card-content-text">
+                            <p>Gratbahn Apartments</p>
+                            <ul>
+                                <li><div class="card-info">
+                                    <div class="card-info-preview">
+                                        <img src="img/preview.svg" alt="">
+                                        <p>6</p>
+                                    </div>
+                                </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-bed">
+                                        <img src="img/bed.svg" alt="">
+                                        <p>2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-metr">
+                                        <img src="img/m2.svg" alt="">
+                                        <p>80 m2</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-price">
+                            <div class="card-price-title">
+                                <p>€39</p>
+                            </div>
+                            <div class="card-price-per-night">
+                                <p>/night</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="offer">
+                <div class="offer-card">
+                    <img src="img/Sommerski.jpg" alt="" class="offer-card-img">
+                    <div class="card-content">
+                        <div class="card-content-text">
+                            <p>Sommerski Rooms Apartments</p>
+                            <ul>
+                                <li><div class="card-info">
+                                    <div class="card-info-preview">
+                                        <img src="img/preview.svg" alt="">
+                                        <p>6</p>
+                                    </div>
+                                </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-bed">
+                                        <img src="img/bed.svg" alt="">
+                                        <p>2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-metr">
+                                        <img src="img/m2.svg" alt="">
+                                        <p>80 m2</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-price">
+                            <div class="card-price-title">
+                                <p>€55</p>
+                            </div>
+                            <div class="card-price-per-night">
+                                <p>/night</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="offer">
+                <div class="offer-card">
+                    <img src="img/Aplin.jpg" alt="" class="offer-card-img">
+                    <div class="card-content">
+                        <div class="card-content-text">
+                            <p>Aplin Apartments</p>
+                            <ul>
+                                <li><div class="card-info">
+                                    <div class="card-info-preview">
+                                        <img src="img/preview.svg" alt="">
+                                        <p>6</p>
+                                    </div>
+                                </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-bed">
+                                        <img src="img/bed.svg" alt="">
+                                        <p>2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-metr">
+                                        <img src="img/m2.svg" alt="">
+                                        <p>80 m2</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-price">
+                            <div class="card-price-title">
+                                <p>€45</p>
+                            </div>
+                            <div class="card-price-per-night">
+                                <p>/night</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="offer">
+                <div class="offer-card">
+                    <img src="img/Gratbahn.jpg" alt="" class="offer-card-img">
+                    <div class="card-content">
+                        <div class="card-content-text">
+                            <p>Gratbahn Apartments</p>
+                            <ul>
+                                <li><div class="card-info">
+                                    <div class="card-info-preview">
+                                        <img src="img/preview.svg" alt="">
+                                        <p>6</p>
+                                    </div>
+                                </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-bed">
+                                        <img src="img/bed.svg" alt="">
+                                        <p>2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card-info-metr">
+                                        <img src="img/m2.svg" alt="">
+                                        <p>80 m2</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-price">
+                            <div class="card-price-title">
+                                <p>€39</p>
+                            </div>
+                            <div class="card-price-per-night">
+                                <p>/night</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+
+        </div>
+        </div>
+
+        <img src="img/arrow.svg" id="next_apart" alt="" onclick="next_apart(); clearInterval(clickerAartments);">
+
+        <div class="more-apartments-btn" id="more-apartments-btn" onclick="showAllApartments(); clearInterval(clickerAartments);">
+            <a id="more_apartments_text">More apartments</a>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="about-us-block">
+    <img src="img/about-us-bg.jpg" alt="">
+    <div class="about-us-content">
+        <div class="mobile_bg_about_us">
+            <img src="img/mob-bg-about.jpg"  alt="">
+        </div>
+        <h1 class="p-anim">About us</h1>
+        <div class="underline p-anim">
+            <svg width="88" height="18" viewBox="0 0 88 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M85.678 14.0421L71.7326 4L57.7872 14.0421L43.8419 4L29.8965 14.0421L15.9454 4L2 14.0421" stroke="#262038" stroke-opacity="0.3" stroke-width="5" stroke-miterlimit="10"/>
+            </svg>
+        </div>
+        <p class="about-us-first-p p-anim">
+            Tempor incididunt ut labore et dolore magna aliqu enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+        </p>
+
+        <p class="about-us-second-p p-anim">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatdidunt ut labore et dolore magna aliqua. <bold>Ut enim ad minim veniam</bold>, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.
+            <br> <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+
+        <div class="more-about-us-btn p-anim">
+            <a href="aboutUs.html">More about us</a>
+        </div>
+    </div>
+</div>
+
+<div class="special-offer-block">
+    <div class="special-block-wrapper">
+        <div class="special-offer">
+            <img src="img/first-img.jpg" alt="">
+            <p>Special offer</p>
+        </div>
+
+        <div class="special-offer middle">
+            <img src="img/second-img.png" alt="">
+            <div class="middle-content">
+
+                <p>Restaurant</p>
+                <span class="spec-off-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do or incididunt ut labor
+            </span>
+
+            </div>
+        </div>
+
+        <div class="special-offer">
+            <img src="img/3.jpg" alt="">
+            <p>Rental</p>
+        </div>
+    </div>
+</div>
+
+<div class="tip-for-trips-block">
+    <div class="tip-for-trips-wrap">
+
+        <div id="decoration">
+            <svg width="404" height="241" viewBox="0 0 404 241" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M387.897 21.7169L361.603 6.51928L338.956 26.7545L312.652 11.5579L290.005 31.7931L263.7 16.5965L241.063 36.8306L214.759 21.6341L192.112 41.8692L165.818 26.6716L143.17 46.9068L116.866 31.7102L94.219 51.9454L67.9247 36.7478L45.2776 56.983L18.9833 41.7854L-3.66385 62.0206L-29.9681 46.824L-52.6152 67.0592L-78.9095 51.8616L-101.557 72.0968L-127.851 56.8992L-150.498 77.1343L-176.802 61.9378L-199.449 82.1729L-225.744 66.9753L-248.391 87.2105L-274.685 72.0129L-297.342 92.2491L-323.636 77.0515L-346.284 97.2867L-372.578 82.0891L-395.225 102.324L-421.529 87.1277L-444.176 107.363" stroke="#4CA67C" stroke-width="10" stroke-miterlimit="10"/>
+                <path d="M392.338 64.8585L366.044 49.6609L343.396 69.8961L317.092 54.6995L294.445 74.9347L268.141 59.7381L245.504 79.9722L219.199 64.7757L196.552 85.0108L170.258 69.8132L147.611 90.0484L121.307 74.8518L98.6594 95.087L72.3652 79.8894L49.718 100.125L23.4237 84.927L0.776581 105.162L-25.5276 89.9656L-48.1748 110.201L-74.4691 95.0032L-97.1162 115.238L-123.41 100.041L-146.058 120.276L-172.362 105.079L-195.009 125.315L-221.303 110.117L-243.95 130.352L-270.245 115.155L-292.902 135.391L-319.196 120.193L-341.843 140.428L-368.137 125.231L-390.785 145.466L-417.089 130.269L-439.736 150.504" stroke="#4CA67C" stroke-width="10" stroke-miterlimit="10"/>
+                <path d="M396.779 108.001L370.484 92.8035L347.837 113.039L321.533 97.8421L298.886 118.077L272.582 102.881L249.944 123.115L223.64 107.918L200.993 128.153L174.699 112.956L152.052 133.191L125.748 117.994L103.1 138.23L76.8061 123.032L54.1589 143.267L27.8647 128.07L5.2175 148.305L-21.0867 133.108L-43.7339 153.343L-70.0281 138.146L-92.6753 158.381L-118.97 143.183L-141.617 163.419L-167.921 148.222L-190.568 168.457L-216.862 153.26L-239.509 173.495L-265.804 158.297L-288.461 178.533L-314.755 163.336L-337.402 183.571L-363.697 168.373L-386.344 188.608L-412.648 173.412L-435.295 193.647" stroke="#4CA67C" stroke-width="10" stroke-miterlimit="10"/>
+                <path d="M401.219 151.143L374.925 135.945L352.278 156.18L325.974 140.984L303.326 161.219L277.022 146.022L254.385 166.256L228.081 151.06L205.434 171.295L179.139 156.097L156.492 176.333L130.188 161.136L107.541 181.371L81.2465 166.174L58.5994 186.409L32.3051 171.211L9.65793 191.446L-16.6463 176.25L-39.2934 196.485L-65.5877 181.287L-88.2349 201.523L-114.529 186.325L-137.176 206.56L-163.481 191.364L-186.128 211.599L-212.422 196.401L-235.069 216.636L-261.363 201.439L-284.02 221.675L-310.315 206.477L-332.962 226.712L-359.256 211.515L-381.903 231.75L-408.208 216.553L-430.855 236.789" stroke="#4CA67C" stroke-width="10" stroke-miterlimit="10"/>
+            </svg>
+
+        </div>
+
+        <div class="tip-title">
+            <h1>Tip for trips</h1>
+            <div class="underline">
+                <svg width="88" height="18" viewBox="0 0 88 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M85.678 14.0421L71.7326 4L57.7872 14.0421L43.8419 4L29.8965 14.0421L15.9454 4L2 14.0421" stroke="#262038" stroke-opacity="0.3" stroke-width="5" stroke-miterlimit="10"/>
+                </svg>
+            </div>
+
+            <div class="tip-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut laboredolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla
+                    nisi ut aliquip ex ea commodo consequat uis aute irure dolor.</p>
+            </div>
+        </div>
+
+        <div class="tip-offers">
+            <div class="tip-offers-wrap">
+
+                <a href="#">
+                    <div class="product">
+                        <img src="img/products/ski.jpg" alt="Where to ski img">
+
+                        <div class="arrow-product">
+                            <img src="img/arrow.svg" alt="">
+                        </div>
+
+                        <div class="product-content">
+                            <div class="product-tags">
+                                <p>winter</p>
+                                <p>ski</p>
+                            </div>
+                            <div class="product-title">
+                                <p>Where to ski?</p>
+                            </div>
+                            <div class="product-description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="product">
+                        <img src="img/products/rider.jpg" alt="">
+
+                        <div class="arrow-product">
+                            <img src="img/arrow.svg" alt="">
+                        </div>
+
+                        <div class="product-content">
+                            <div class="product-tags">
+                                <p>winter</p>
+                                <p>lake</p>
+                            </div>
+                            <div class="product-title">
+                                <p>Where to rent a boat for swimming?</p>
+                            </div>
+                            <div class="product-description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="product">
+                        <img src="img/products/hiking.jpg" alt="">
+
+                        <div class="arrow-product">
+                            <img src="img/arrow.svg" alt="">
+                        </div>
+
+                        <div class="product-content">
+                            <div class="product-tags">
+                                <p>winter</p>
+                                <p>hiking</p>
+                            </div>
+                            <div class="product-title">
+                                <p>Hiking at Kaparun</p>
+                            </div>
+                            <div class="product-description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="product">
+                        <img src="img/products/home.jpg" alt="">
+
+                        <div class="arrow-product">
+                            <img src="img/arrow.svg" alt="">
+                        </div>
+
+                        <div class="product-content">
+                            <div class="product-tags">
+                                <p>winter</p>
+                                <p>ski</p>
+                            </div>
+                            <div class="product-title">
+                                <p>Where to warm up after skiing?</p>
+                            </div>
+                            <div class="product-description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="arrows-activ">
+        <img src="img/arrow-offer.svg" id="before_activ" alt="" onclick="before_activ()">
+        <img src="img/arrow-offer.svg" id="next_activ" alt="" onclick="next_activ()">
+        </div>
+
+        <div class="more-apartments-btn" onclick="showAllActivity()">
+            <a>More activitions</a>
+        </div>
+    </div>
+</div>
+
+<div class="find-us-block">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86811.76478829498!2d12.739876489341533!3d47.160446483182845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47771b485c24ec93%3A0xe79984a7f033db37!2z0JrQsNC_0YDRg9C9LCDQkNCy0YHRgtGA0LjRjw!5e0!3m2!1sru!2spl!4v1616011818699!5m2!1sru!2spl" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    <div class="find-us-info">
+        <h1>Where to find us?</h1>
+        <div class="underline" style="transform: translate(240px, 5px);">
+            <svg width="88" height="18" viewBox="0 0 88 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M85.678 14.0421L71.7326 4L57.7872 14.0421L43.8419 4L29.8965 14.0421L15.9454 4L2 14.0421" stroke="#262038" stroke-opacity="0.3" stroke-width="5" stroke-miterlimit="10"/>
+            </svg>
+
+        </div>
+        <p class="find-us-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consect tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+
+        <button>Check on the map</button>
+    </div>
+</div>
+
+<div class="opinions-block">
+    <div class="opinions-wrap">
+        <div class="opinion-title">
+            <h1>Opinions</h1>
+            <div class="underline">
+                <svg width="88" height="18" viewBox="0 0 88 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M85.678 14.0421L71.7326 4L57.7872 14.0421L43.8419 4L29.8965 14.0421L15.9454 4L2 14.0421" stroke="#262038" stroke-opacity="0.3" stroke-width="5" stroke-miterlimit="10"/>
+                </svg>
+            </div>
+
+            <div class="opinions-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+
+        <div class="opinions-card-wrapp">
+
+            <div class="opinions-card">
+                <div class="opinions-card-lside">
+                    <svg width="32" height="26" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.608 0.919998L9.496 12.632H13.336V25.592H0.376V12.44L3.832 0.919998H11.608ZM29.656 0.919998L27.544 12.632H31.384V25.592H18.424V12.44L21.88 0.919998H29.656Z" fill="#262038" fill-opacity="0.2"/>
+                    </svg>
+
+                    <img src="img/Aplin.jpg" alt="">
+                </div>
+                <div class="opinions-content">
+                    <div class="opinions-card-title">
+                        <h2>"Fantastic place to stay!"</h2>
+                    </div>
+                    <div class="card-description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim lorem ipsum veniam!.</p>
+                    </div>
+                    <div class="card-autor">
+                        <p>Mire & Paul<span> at </span>Alpin</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="opinions-card">
+                <div class="opinions-card-lside">
+                    <svg width="32" height="26" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.608 0.919998L9.496 12.632H13.336V25.592H0.376V12.44L3.832 0.919998H11.608ZM29.656 0.919998L27.544 12.632H31.384V25.592H18.424V12.44L21.88 0.919998H29.656Z" fill="#262038" fill-opacity="0.2"/>
+                    </svg>
+
+                    <img src="img/Sommerski.jpg" alt="">
+                </div>
+                <div class="opinions-content">
+                    <div class="opinions-card-title">
+                        <h2>"Cosy and comfortable"</h2>
+                    </div>
+                    <div class="card-description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim lorem ipsum veniam!.</p>
+                    </div>
+                    <div class="card-autor">
+                        <p>Mire & Paul<span> at </span>Sommerski Rooms</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrows">
+            <div  onclick="beforeOpinion()">
+                <svg id="opinions-left-arrow" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="25" transform="rotate(-180 25 25)" fill="#4CA67C"/>
+                    <path d="M21.9292 31L28.0003 24.9289L21.9292 18.8578" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div  onclick="nextOpinion()">
+                <svg id="opinions-right-arrow" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="25" transform="rotate(-180 25 25)" fill="#4CA67C"/>
+                    <path d="M21.9292 31L28.0003 24.9289L21.9292 18.8578" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>
+
+<footer>
+    <div class="vector">
+        <img src="img/footer-Vector.svg" alt="">
+        <img src="img/footer-Vector.svg" alt="">
+    </div>
+    <div class="desctop-footer">
+
+        <div class="logo">
+            <a href="#">
+                <img src="img/footer-logo.png" alt="">
+            </a>
+        </div>
+
+        <div class="footer-content">
+            <div class="content-vector">
+
+                <svg width="711" height="13" viewBox="0 0 711 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 10.2236C13.6657 10.2236 13.6657 2.99984 27.3399 2.99984C41.0057 2.99984 41.0057 10.2236 54.6799 10.2236C68.3456 10.2236 68.3456 2.99984 82.0198 2.99984C95.6856 2.99984 95.6855 10.2236 109.36 10.2236C123.034 10.2236 123.034 2.99984 136.7 2.99984C150.365 2.99984 150.365 10.2236 164.04 10.2236C177.705 10.2236 177.705 2.99984 191.38 2.99984C205.045 2.99984 205.045 10.2236 218.72 10.2236C232.385 10.2236 232.385 2.99984 246.059 2.99984C259.734 2.99984 259.734 10.2236 273.399 10.2236C287.074 10.2236 287.074 2.99984 300.739 2.99984C314.414 2.99984 314.414 10.2236 328.079 10.2236C341.754 10.2236 341.754 2.99984 355.419 2.99984C369.093 2.99984 369.093 10.2236 382.759 10.2236C396.433 10.2236 396.433 2.99984 410.099 2.99984C423.773 2.99984 423.773 10.2236 437.439 10.2236C451.113 10.2236 451.113 2.99984 464.779 2.99984C478.453 2.99984 478.453 10.2236 492.119 10.2236C505.785 10.2236 505.785 2.99984 519.459 2.99984C533.133 2.99984 533.133 10.2236 546.799 10.2236C560.473 10.2236 560.473 2.99984 574.139 2.99984C587.813 2.99984 587.813 10.2236 601.487 10.2236C615.161 10.2236 615.161 2.99984 628.836 2.99984C642.51 2.99984 642.51 10.2236 656.184 10.2236C669.858 10.2236 669.858 2.99984 683.533 2.99984C697.207 2.99984 697.207 10.2236 710.881 10.2236" stroke="#58516B" stroke-width="5" stroke-miterlimit="10"/>
+                </svg>
+                <svg width="711" height="13" viewBox="0 0 711 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 10.2236C13.6657 10.2236 13.6657 2.99984 27.3399 2.99984C41.0057 2.99984 41.0057 10.2236 54.6799 10.2236C68.3456 10.2236 68.3456 2.99984 82.0198 2.99984C95.6856 2.99984 95.6855 10.2236 109.36 10.2236C123.034 10.2236 123.034 2.99984 136.7 2.99984C150.365 2.99984 150.365 10.2236 164.04 10.2236C177.705 10.2236 177.705 2.99984 191.38 2.99984C205.045 2.99984 205.045 10.2236 218.72 10.2236C232.385 10.2236 232.385 2.99984 246.059 2.99984C259.734 2.99984 259.734 10.2236 273.399 10.2236C287.074 10.2236 287.074 2.99984 300.739 2.99984C314.414 2.99984 314.414 10.2236 328.079 10.2236C341.754 10.2236 341.754 2.99984 355.419 2.99984C369.093 2.99984 369.093 10.2236 382.759 10.2236C396.433 10.2236 396.433 2.99984 410.099 2.99984C423.773 2.99984 423.773 10.2236 437.439 10.2236C451.113 10.2236 451.113 2.99984 464.779 2.99984C478.453 2.99984 478.453 10.2236 492.119 10.2236C505.785 10.2236 505.785 2.99984 519.459 2.99984C533.133 2.99984 533.133 10.2236 546.799 10.2236C560.473 10.2236 560.473 2.99984 574.139 2.99984C587.813 2.99984 587.813 10.2236 601.487 10.2236C615.161 10.2236 615.161 2.99984 628.836 2.99984C642.51 2.99984 642.51 10.2236 656.184 10.2236C669.858 10.2236 669.858 2.99984 683.533 2.99984C697.207 2.99984 697.207 10.2236 710.881 10.2236" stroke="#58516B" stroke-width="5" stroke-miterlimit="10"/>
+                </svg>
+
+            </div>
+
+
+            <div class="footer-content-wrap">
+                <div class="footer-contact">
+                    <div class="contact-us">
+                        <h2>Contact us</h2>
+                    </div>
+                    <p><bold>Praga.at</bold>
+                        <br>
+                        Krakowska 20/29, 30-300 Kaprun, Austria</p>
+
+                    <div class="contact-tel">
+                        <a href="tel:+48798616989">
+                            <div class="elipse">
+                                <img src="img/tel.svg" alt="">
+                            </div>
+
+                            +43 600 400 500</a>
+
+                    </div>
+
+                    <div class="contact-mail">
+                        <a href="mailto:contact@apartments.com" style="color: #ec7180; font-size: 14px">
+                            <div class="elipse">
+                                <img src="img/footer-mail.svg" alt="">
+                            </div>
+                            contact@apartments.com</a>
+                    </div>
+                </div>
+
+
+                <div class="footer-menu">
+                    <h2>Menu</h2>
+                    <br>
+                    <div class="links">
+                        <div class="footer-links-left-column" style="width: 152px;">
+                            <a href="#">Apartments</a>
+                            <a href="#">Rental</a>
+                            <a href="#">Gallery</a>
+                            <a href="#">Opinions</a>
+                            <a href="#">Property management</a>
+                        </div>
+
+                        <div class="footer-links-right-column" style="width: 90px;">
+                            <a href="#">Tips for trips</a>
+                            <a href="#">Restaurant</a>
+                            <a href="#">About us</a>
+                            <a href="#">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-contact-form">
+                    <h2>Contact form</h2>
+                    <br>
+
+                    <form action="https://formspree.io/f/mlearrkr" method="POST">
+                        <label for="name1">
+                        </label>
+                        <input type="text" id="name1" name="name" placeholder="Name">
+
+                        <label for="email1">
+                        </label>
+                        <input type="text" id="email1" name="email" placeholder="Email">
+
+                        <label for="user_post_textarea1">
+                        </label>
+                        <textarea class='textField' type='text' name='message' value='' id="user_post_textarea1" onkeyup='charLimit(this, 237);' placeholder="Message"></textarea>
+
+                        <input type="submit" value="" id="form-submit1">
+
+                    </form>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="content-vector">
+
+            <svg width="711" height="13" viewBox="0 0 711 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 10.2236C13.6657 10.2236 13.6657 2.99984 27.3399 2.99984C41.0057 2.99984 41.0057 10.2236 54.6799 10.2236C68.3456 10.2236 68.3456 2.99984 82.0198 2.99984C95.6856 2.99984 95.6855 10.2236 109.36 10.2236C123.034 10.2236 123.034 2.99984 136.7 2.99984C150.365 2.99984 150.365 10.2236 164.04 10.2236C177.705 10.2236 177.705 2.99984 191.38 2.99984C205.045 2.99984 205.045 10.2236 218.72 10.2236C232.385 10.2236 232.385 2.99984 246.059 2.99984C259.734 2.99984 259.734 10.2236 273.399 10.2236C287.074 10.2236 287.074 2.99984 300.739 2.99984C314.414 2.99984 314.414 10.2236 328.079 10.2236C341.754 10.2236 341.754 2.99984 355.419 2.99984C369.093 2.99984 369.093 10.2236 382.759 10.2236C396.433 10.2236 396.433 2.99984 410.099 2.99984C423.773 2.99984 423.773 10.2236 437.439 10.2236C451.113 10.2236 451.113 2.99984 464.779 2.99984C478.453 2.99984 478.453 10.2236 492.119 10.2236C505.785 10.2236 505.785 2.99984 519.459 2.99984C533.133 2.99984 533.133 10.2236 546.799 10.2236C560.473 10.2236 560.473 2.99984 574.139 2.99984C587.813 2.99984 587.813 10.2236 601.487 10.2236C615.161 10.2236 615.161 2.99984 628.836 2.99984C642.51 2.99984 642.51 10.2236 656.184 10.2236C669.858 10.2236 669.858 2.99984 683.533 2.99984C697.207 2.99984 697.207 10.2236 710.881 10.2236" stroke="#ED7080" stroke-width="5" stroke-miterlimit="10"/>
+            </svg>
+
+            <svg width="711" height="13" viewBox="0 0 711 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 10.2236C13.6657 10.2236 13.6657 2.99984 27.3399 2.99984C41.0057 2.99984 41.0057 10.2236 54.6799 10.2236C68.3456 10.2236 68.3456 2.99984 82.0198 2.99984C95.6856 2.99984 95.6855 10.2236 109.36 10.2236C123.034 10.2236 123.034 2.99984 136.7 2.99984C150.365 2.99984 150.365 10.2236 164.04 10.2236C177.705 10.2236 177.705 2.99984 191.38 2.99984C205.045 2.99984 205.045 10.2236 218.72 10.2236C232.385 10.2236 232.385 2.99984 246.059 2.99984C259.734 2.99984 259.734 10.2236 273.399 10.2236C287.074 10.2236 287.074 2.99984 300.739 2.99984C314.414 2.99984 314.414 10.2236 328.079 10.2236C341.754 10.2236 341.754 2.99984 355.419 2.99984C369.093 2.99984 369.093 10.2236 382.759 10.2236C396.433 10.2236 396.433 2.99984 410.099 2.99984C423.773 2.99984 423.773 10.2236 437.439 10.2236C451.113 10.2236 451.113 2.99984 464.779 2.99984C478.453 2.99984 478.453 10.2236 492.119 10.2236C505.785 10.2236 505.785 2.99984 519.459 2.99984C533.133 2.99984 533.133 10.2236 546.799 10.2236C560.473 10.2236 560.473 2.99984 574.139 2.99984C587.813 2.99984 587.813 10.2236 601.487 10.2236C615.161 10.2236 615.161 2.99984 628.836 2.99984C642.51 2.99984 642.51 10.2236 656.184 10.2236C669.858 10.2236 669.858 2.99984 683.533 2.99984C697.207 2.99984 697.207 10.2236 710.881 10.2236" stroke="#ED7080" stroke-width="5" stroke-miterlimit="10"/>
+            </svg>
+
+
+        </div>
+
+
+        <div class="footer-copyright">
+            <div class="text-copyright">
+                <p>Copyright © 2021 by Hotelwsieci</p>
+
+                <svg width="70" height="31" viewBox="0 0 70 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M26.0678 8.27319C26.035 7.9842 25.8709 7.72768 25.6214 7.57182L14.0269 0.434764L13.5476 0.142528C13.2358 -0.0522961 12.8353 -0.045802 12.5267 0.152269L12.0672 0.441258L0.462859 7.57182C0.18383 7.74067 0.0131307 8.04914 0.0131307 8.3771C0.0131307 8.40957 0.00328269 8.51997 0 8.69531V17.6929C0.00328269 22.3298 3.82105 26.1029 8.49231 26.1061H11.7389C13.61 26.6743 15.2153 28.0381 16.1278 29.7396L16.1377 29.7591L16.141 29.7623L16.1836 29.824L16.1968 29.8532C16.2001 29.8565 16.2001 29.863 16.2066 29.8662C16.3117 30.0221 16.4495 30.1584 16.6268 30.2591C16.8074 30.3695 17.0339 30.4344 17.2669 30.4344C17.6149 30.4344 17.9432 30.2916 18.1664 30.0708C18.3962 29.8435 18.5406 29.5318 18.5439 29.2006V29.1778L18.557 26.0444C20.6153 25.8139 22.4536 24.8462 23.7929 23.4273C25.211 21.9271 26.0875 19.9074 26.0875 17.6962V8.69531C26.0941 8.51997 26.0744 8.38034 26.0678 8.27319ZM24.1803 17.6897C24.1803 19.4041 23.504 20.9562 22.4043 22.1219C21.3046 23.2909 19.7815 24.0572 18.081 24.1806C18.0482 24.1838 18.0154 24.1838 17.9793 24.1936C17.976 24.1968 17.9694 24.1968 17.9596 24.1968H17.9563C17.6543 24.2455 17.372 24.3819 17.152 24.5767C16.8993 24.804 16.7253 25.106 16.6629 25.4437C16.6531 25.4956 16.6498 25.5573 16.6498 25.6125L16.6465 27.1452C15.4779 25.7911 13.9284 24.7553 12.1558 24.2423C12.0704 24.2131 11.9785 24.2033 11.8866 24.2033H8.49231C6.68683 24.2033 5.04549 23.4695 3.84731 22.2843C2.65569 21.0991 1.91381 19.4756 1.91381 17.6832V8.91286L13.0454 2.06804L24.1803 8.91936V17.6897Z" fill="#EB5B4B"/>
+                    <path d="M9.59518 9.69727H7.34326V19.4125H9.59518V13.9185H16.4954V19.4125H18.7539V9.69727H16.4954V12.2332H9.59518V9.69727Z" fill="#EB5B4B"/>
+                    <path d="M39.6317 14.5434V11.0301H36.4541V14.5434H34.0249V5.56523L36.4541 5.4873V9.14351H39.6317V5.56523H42.0609V14.5434H39.6317Z" fill="white"/>
+                    <path d="M47.0145 14.6897C46.3186 14.6897 45.6981 14.5663 45.1499 14.3196C44.6017 14.0728 44.175 13.6994 43.8631 13.1961C43.5513 12.6928 43.397 12.0628 43.397 11.3063C43.397 10.5854 43.5611 9.97173 43.8894 9.47168C44.2176 8.96838 44.6641 8.58523 45.2189 8.31572C45.7769 8.04622 46.3908 7.91309 47.0703 7.91309C47.7826 7.91309 48.4129 8.04297 48.9644 8.30273C49.5159 8.5625 49.9492 8.9489 50.2643 9.45869C50.5795 9.96848 50.7403 10.6082 50.7403 11.3745C50.7403 12.0856 50.5729 12.6895 50.2381 13.1831C49.9033 13.6766 49.4568 14.0501 48.8955 14.3066C48.3341 14.5631 47.7071 14.6897 47.0145 14.6897ZM47.0408 12.735C47.3001 12.735 47.5167 12.6863 47.6874 12.5824C47.8614 12.4817 47.9927 12.3291 48.0879 12.1278C48.1831 11.9265 48.2258 11.6732 48.2258 11.3745C48.2258 11.0822 48.1798 10.8257 48.0912 10.6017C48.0026 10.3776 47.8746 10.199 47.7104 10.0659C47.5463 9.93276 47.3395 9.86782 47.09 9.86782C46.8405 9.86782 46.6271 9.92627 46.4499 10.0399C46.2726 10.1536 46.1347 10.3192 46.0428 10.5367C45.9509 10.7543 45.9049 11.0108 45.9049 11.3095C45.9049 11.592 45.9509 11.8388 46.0395 12.0564C46.1282 12.2707 46.2562 12.4395 46.4269 12.5564C46.5943 12.6765 46.8011 12.735 47.0408 12.735Z" fill="white"/>
+                    <path d="M56.4914 10.2922H54.5678V11.8768C54.5678 12.1398 54.6367 12.3508 54.7746 12.5034C54.9124 12.6561 55.0963 12.734 55.3293 12.734C55.4639 12.734 55.6149 12.7145 55.7823 12.6755C55.953 12.6366 56.1106 12.5716 56.2649 12.484L56.9575 14.1205C56.8492 14.2082 56.6982 14.2958 56.498 14.3835C56.2977 14.4712 56.0811 14.5458 55.8447 14.601C55.6084 14.6562 55.3851 14.6887 55.1718 14.6887C54.6564 14.6887 54.1673 14.5946 53.7044 14.403C53.2415 14.2146 52.864 13.9322 52.5752 13.5522C52.2863 13.1756 52.1418 12.7015 52.1418 12.1398V10.2922H51.1406V8.40564H52.1418V6.67495L54.571 6.34375V8.40239H56.2682L56.4914 10.2922Z" fill="white"/>
+                    <path d="M60.0042 11.9421C60.0666 12.1174 60.1585 12.2733 60.2833 12.4031C60.408 12.5363 60.5689 12.6369 60.7625 12.7084C60.9595 12.7766 61.1926 12.8155 61.4716 12.8155C61.8622 12.8155 62.2069 12.7668 62.5057 12.6694C62.8044 12.572 63.0506 12.4746 63.2475 12.3804L63.9271 14.004C63.7564 14.1273 63.5298 14.241 63.2475 14.3481C62.9619 14.4553 62.6468 14.5365 62.2988 14.5982C61.9509 14.6599 61.5963 14.6923 61.232 14.6923C60.4934 14.6923 59.8303 14.5657 59.2427 14.3092C58.6551 14.0527 58.1955 13.676 57.8606 13.1792C57.5258 12.6824 57.3584 12.0719 57.3584 11.3511C57.3584 10.6302 57.5127 10.0133 57.818 9.50352C58.1265 8.99373 58.5434 8.60083 59.072 8.32808C59.6005 8.05532 60.1914 7.91895 60.8413 7.91895C61.534 7.91895 62.1117 8.07156 62.5713 8.37354C63.0276 8.67876 63.3723 9.0814 63.5988 9.58794C63.8253 10.0945 63.9402 10.6465 63.9402 11.2439V11.9453H60.0042V11.9421ZM61.6193 10.7536C61.6193 10.6302 61.5898 10.4971 61.5307 10.3575C61.4749 10.2179 61.383 10.0945 61.2648 9.99382C61.1433 9.89316 60.9825 9.84121 60.7757 9.84121C60.6345 9.84121 60.4966 9.88342 60.3621 9.96785C60.2275 10.0523 60.1224 10.1627 60.0469 10.299C59.9714 10.4354 59.932 10.588 59.932 10.7536H61.6193Z" fill="white"/>
+                    <path d="M65.0103 14.543V5.36682L67.4394 5.2207V14.543H65.0103Z" fill="white"/>
+                    <path d="M39.2969 25.1061L38.2826 21.7908L37.2813 25.1061H35.0655L33.0894 19.099L35.3314 18.4658L36.267 22.3363L37.1599 18.7061H39.4414L40.4032 22.3363L41.2435 18.7061H43.6596L41.5127 25.1093H39.2969V25.1061Z" fill="white"/>
+                    <path d="M44.769 22.9825C44.9463 23.0637 45.1498 23.1351 45.3763 23.2001C45.6028 23.2683 45.8293 23.3202 46.0493 23.3657C46.2725 23.4111 46.4596 23.4339 46.6106 23.4339C46.7189 23.4339 46.8141 23.4209 46.8995 23.3949C46.9815 23.3689 47.0505 23.3332 47.0997 23.2877C47.1489 23.2423 47.1719 23.1936 47.1719 23.1416C47.1719 23.1059 47.1457 23.0669 47.0931 23.015C47.0406 22.9663 46.9651 22.9176 46.8666 22.8689C46.7682 22.8202 46.6565 22.778 46.5318 22.7422C46.1773 22.6188 45.8195 22.4662 45.4649 22.2876C45.1104 22.1058 44.8117 21.8818 44.5786 21.6058C44.3423 21.333 44.2241 21.0051 44.2241 20.6154C44.2241 19.9465 44.4768 19.4237 44.9857 19.0438C45.4912 18.6639 46.197 18.4756 47.0964 18.4756C47.2737 18.4756 47.5068 18.4918 47.7989 18.5275C48.0878 18.5633 48.3898 18.6282 48.6984 18.7256C49.007 18.823 49.2893 18.9691 49.5387 19.1607L48.8592 20.6803C48.5999 20.5667 48.3274 20.4725 48.0451 20.4043C47.7595 20.3329 47.5035 20.2972 47.2704 20.2972C47.0734 20.2972 46.9159 20.3232 46.7911 20.3751C46.6664 20.4271 46.604 20.4985 46.604 20.5862C46.604 20.6381 46.6697 20.6998 46.7977 20.7713C46.9257 20.8427 47.0899 20.9141 47.2835 20.9823C47.6381 21.1057 47.9926 21.2583 48.3373 21.4369C48.6852 21.6187 48.9741 21.8428 49.2039 22.1123C49.4337 22.3818 49.5519 22.713 49.5519 23.1092C49.5519 23.7781 49.3287 24.3008 48.8789 24.6807C48.4292 25.0606 47.7562 25.249 46.8568 25.249C46.6795 25.249 46.4169 25.2262 46.0755 25.1808C45.7341 25.1353 45.3796 25.0606 45.0152 24.9502C44.6508 24.8398 44.3423 24.6872 44.0928 24.4957L44.769 22.9825Z" fill="white"/>
+                    <path d="M50.7633 17.4498C50.504 17.1933 50.376 16.8913 50.376 16.5374C50.376 16.177 50.504 15.8652 50.7633 15.6055C51.0227 15.3457 51.328 15.2158 51.6825 15.2158C52.0469 15.2158 52.362 15.3457 52.6246 15.6055C52.8872 15.8652 53.0185 16.177 53.0185 16.5374C53.0185 16.8881 52.8872 17.1933 52.6246 17.4498C52.362 17.7063 52.0469 17.833 51.6825 17.833C51.328 17.833 51.0227 17.7031 50.7633 17.4498ZM50.4843 25.1064V18.7032H52.9135V25.1064H50.4843Z" fill="white"/>
+                    <path d="M56.4915 22.5046C56.5539 22.6799 56.6458 22.8358 56.7706 22.9656C56.8953 23.0988 57.0562 23.1994 57.2498 23.2709C57.4468 23.3391 57.6799 23.378 57.9589 23.378C58.3495 23.378 58.6942 23.3293 58.993 23.2319C59.2917 23.1345 59.5379 23.0371 59.7348 22.9429L60.4144 24.5665C60.2437 24.6898 60.0172 24.8035 59.7348 24.9106C59.4492 25.0178 59.1341 25.099 58.7861 25.1607C58.4382 25.2224 58.0837 25.2548 57.7193 25.2548C56.9807 25.2548 56.3176 25.1282 55.73 24.8717C55.1424 24.6152 54.6828 24.2385 54.348 23.7417C54.0131 23.2449 53.8457 22.6344 53.8457 21.9136C53.8457 21.1927 54 20.5758 54.3053 20.066C54.6138 19.5562 55.0308 19.1633 55.5593 18.8906C56.0878 18.6178 56.6787 18.4814 57.3286 18.4814C58.0213 18.4814 58.599 18.6308 59.0586 18.936C59.5149 19.238 59.8596 19.6439 60.0861 20.1504C60.3126 20.657 60.4275 21.209 60.4275 21.8064V22.5078H56.4915V22.5046ZM58.1066 21.3161C58.1066 21.1927 58.0771 21.0596 58.018 20.92C57.9622 20.7804 57.8703 20.657 57.7521 20.5563C57.6306 20.4557 57.4698 20.407 57.263 20.407C57.1218 20.407 56.9839 20.4492 56.8494 20.5336C56.7148 20.618 56.6097 20.7284 56.5342 20.8648C56.4587 21.0012 56.4193 21.1538 56.4193 21.3194H58.1066V21.3161Z" fill="white"/>
+                    <path d="M66.7171 24.6057C66.4676 24.8006 66.205 24.9434 65.9292 25.0344C65.6535 25.1253 65.3909 25.1837 65.1414 25.2129C64.8919 25.2389 64.6785 25.2519 64.5013 25.2519C63.8053 25.2519 63.1915 25.122 62.6597 24.8623C62.1246 24.6025 61.7077 24.2226 61.4123 23.7258C61.1168 23.229 60.9658 22.6218 60.9658 21.9107C60.9658 21.1898 61.1135 20.5729 61.4123 20.0631C61.711 19.5533 62.1279 19.1604 62.6597 18.8876C63.1915 18.6149 63.8053 18.4785 64.5013 18.4785C64.6785 18.4785 64.8919 18.4915 65.1414 18.5175C65.3909 18.5435 65.6535 18.6052 65.9292 18.6961C66.205 18.7902 66.4676 18.9331 66.7171 19.1247L66.0376 20.7742C65.7782 20.6411 65.5583 20.5534 65.3712 20.5047C65.1841 20.456 64.974 20.4333 64.7442 20.4333C64.5308 20.4333 64.3273 20.4917 64.1303 20.6118C63.9334 20.732 63.7758 20.9008 63.6543 21.1216C63.5329 21.3424 63.4738 21.6054 63.4738 21.9139C63.4738 22.2126 63.5329 22.4659 63.6543 22.6737C63.7758 22.8815 63.9334 23.0374 64.1303 23.1413C64.3273 23.2452 64.5308 23.3004 64.7442 23.3004C64.9576 23.3004 65.1611 23.2744 65.3581 23.229C65.555 23.1803 65.7815 23.0894 66.0376 22.9595L66.7171 24.6057Z" fill="white"/>
+                    <path d="M67.7448 17.4498C67.4854 17.1933 67.3574 16.8913 67.3574 16.5374C67.3574 16.177 67.4854 15.8652 67.7448 15.6055C68.0041 15.3457 68.3094 15.2158 68.6639 15.2158C69.0283 15.2158 69.3434 15.3457 69.6061 15.6055C69.8687 15.8652 70 16.177 70 16.5374C70 16.8881 69.8687 17.1933 69.6061 17.4498C69.3434 17.7063 69.0283 17.833 68.6639 17.833C68.3094 17.833 68.0041 17.7031 67.7448 17.4498ZM67.4658 25.1064V18.7032H69.8949V25.1064H67.4658Z" fill="white"/>
+                </svg>
+            </div>
+
+
+
+            <div class="footer-social-media">
+                <a href="#">
+                    <img src="img/insta.svg" alt="">
+                </a>
+
+                <a href="#">
+                    <img src="img/fb.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="mobile-footer">
+        <div class="stars">
+            <div class="block-star">
+                <div class="svg">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="50" height="50" fill="url(#pattern0)"/>
+                        <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0" transform="scale(0.00877193)"/>
+                            </pattern>
+                            <image id="image0" width="114" height="114" xlink:href="data:image/png;base64,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"/>
+                        </defs>
+                    </svg>
+
+                </div>
+
+                <div class="text-star-block">
+                    <h3>163</h3>
+                    <p>apartments</p>
+
+                </div>
+
+            </div>
+            <div class="block-star">
+                <div class="svg">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="50" height="50" fill="url(#pattern0)"/>
+                        <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0" transform="scale(0.00877193)"/>
+                            </pattern>
+                            <image id="image0" width="114" height="114" xlink:href="data:image/png;base64,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"/>
+                        </defs>
+                    </svg>
+
+
+                </div>
+
+                <div class="text-star-block">
+                    <h3>7</h3>
+                    <p>locations</p>
+
+                </div>
+
+            </div>
+            <div class="block-star">
+                <div class="svg">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="50" height="50" fill="url(#pattern0)"/>
+                        <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0" transform="scale(0.00877193)"/>
+                            </pattern>
+                            <image id="image0" width="114" height="114" xlink:href="data:image/png;base64,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"/>
+                        </defs>
+                    </svg>
+
+
+                </div>
+
+                <div class="text-star-block">
+                    <h3>9.9</h3>
+                    <p>rating</p>
+
+                </div>
+
+            </div>
+            <div class="block-star">
+                <div class="svg">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="50" height="50" fill="url(#pattern0)"/>
+                        <rect width="50" height="50" fill="url(#pattern1)"/>
+                        <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0" transform="scale(0.00877193)"/>
+                            </pattern>
+                            <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image1" transform="translate(-0.00438596) scale(0.00877193)"/>
+                            </pattern>
+                            <image id="image0" width="114" height="114" xlink:href="data:image/png;base64,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"/>
+                            <image id="image1" width="115" height="114" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAAByCAYAAABgH+5DAAAOr0lEQVR4Ae2dvYpsWRXH5xF8AycQwUSECRQEuaCBBiOXMRiQCQZBBgbBLr2BgUHXPIB0PsmEhjcxF1/AfgCDTs0E5/bAJDX8ilo9/169z9kfa53qU1X3wmGfj73XXmv919fe51Tfd94543//v7p+8ebV9prj/tVnV19fXf/ojMU9T9EA7n6zvbvfbHeF4+7N1fXL85T8jKTC8+4329sCgE9A/XKz/efu6vo7ZyT++Yhy8MYnoM0B+9Vm+7+3XroiG8C77jfb13Og1Z6RU1ck0mWyQoEzkxu7vJSw+9XV9buXqclnlPrgjTc1j+t9TtglXD+jaKc39cGjbvAGf9xvtjf75cTV9Uv66UF+e7PZfrFXerlS7fLGGbCphG90bjv/8k+ffbznb7P9wvPONc8uwsMz8tsMAFlAptA5+zzcumw4FcAa+Lw5vbjZwDGW2iB8ilesaZ6zW/qQQ9ak4CPzctdg66fThaLlyApclYdTNJ0OWjOcXrhXmlGdh3deaq70kegscucR1oRm/atuWYPOBLD1PyJXeAu95OuT3kzI2jdtNYB//+7Pu3999Mfd33750cPx2/d+tdNj+/MPH57948NP9/1b6Uf7UQiu3wULHC7tlf/55C+7v3/w+92rn/1m9/4Pf7H7/nd/HDqgAS1oQjsK3NT4k/POw7bd1Jv+YUWh5M/f//gReO9976e7T37y6723tXoa3ktfPJix0PDGALjMlQ3syeXO6PtFb9V4C6HSFG6KJqz6vqPX0PKGYvMBOAYwSvvJuFN4M5O5kf7fP/x17zkvfvBiDyLeQ77L9pQnit5s93Mwl/dYDCoR1PXu25Ijs5YheIgpEjDxzJLSj3GPuc2gzFMBNSkq3PJqrVByHP8WnngodFLyI1ZvigPM5wTRGwq8mIEZqHgvEcT37b3evxd9ri0/KrLMl8QoBMVkK6lXqbX+nk/4xfgSQ+8dO2Y4yeKuaSDWhO55Trgyb0xWTNhjpuRQns0AqYyn+o/cx1kWA5XPKEaYmhtD6DJlsMbLCFlz82U+g1d4Nv5ps2VI/ybpUKE2fVjcoyxVBAVPz9g19VWDBFCWTdlGmbZztIRHGpBrK3JGjYScqcXREoCGvxokR44KWBqHxSIoFozwSeX9KrwaWZYElJAbKoqy30WqR54ikBgjKYFip7R5sTSgoTVp5racAYlXsi9a8lx/D+WRkxirbz44Z4sNxZaU6ulEr+FX+UeGqTzvAYXP6Pw2Huca9k4Ws0Yo0iI4CuAAnBotQMT6NWzZ+FKLorNBNR5s2WTzMldtXemLoqxly7ODieCqiBqQeIGCaJvq0LGjBDRjWgylNj9G4b0QHqANwLXx9hweTW7amgHYuLn2WcFEeAOmpcJTi66B4z3GFBcBlAhi/EIv+raEdGB8QbfHGEqghsCMLktQhglTK3jwSOtLOwe+gs4cOg9jW3OyKky9MWsnSo0ZvuBT5+w9Zx98OGdiCb0TWn8Fp5YzCG3qEQbqFKDqlZYrI16gIXFqTpOrt1U9IFck3IaqWT4P7GWe/likKZy2Fl7UK3w+9MpVr2Sc8ee9oGZANg5jMONp4dXG9bRqaMzRM1b7hj45wRKUWOu5Wnoth6kyAY45fHmvgJqReCtnjIZbPB0+SocVUozRtzU1Xlvl9/1URvgenWc4xDJwZAdIPaTFCnXZomu3EqDaF7AAAqDNs6It9CJh0IOo1xp9WvSiY+08BCaDjVBr2+OV0NQQ5BXpAZ0DC1ChpbmXa/VMwOIeh3q4p8szxrXK3NIv6p0pH4K1MKp9TJmt1qdKVTp2PgUogOCpPLe+tBo2a4BgPAak8mH3oKW0o+cR7wyDeXj91SyQFic1RZpiTHG0ds+3Gl7phxd6L7YxzGs0azxoX3jHe8wYoYHBGN2M1nvnlAwTc8V+fNRbACG8KRLGJ5h6dN/603ovQ1ilqX05t3BIP6uYaQGppcjQgolzBRL6NWNokc/3UXm0Gvf9StehnNmzaaBWh+eUmCndU+EMAAURwLivXuRB1Wvo6cE4lKb3dE4d68+XABNZbB6Mp6STqXvDvyQjxPZ8OqmhkPMphvx9zSNWxCCsgWj9VQn049pA8h5lymptmcvyr3prZxhsklmrffjr2a0azpu9uz+qhNYQC1B+h8SDaGCiWANnyvMJ0/RrPYyeeqB67RJgIo/qqjfUdnvn4Q8KNlmaKdsUAxh2r7VljI1HmaVxAGV9aEt9eu5p2MbLbazyYnnYnmW1GmV69UW0bP5q71DBdn3UrF7Ta2koyHuneooqMBNM9Q4tvDLnUN71XOsL5uuJZAc6r5uKoZGvC9TKe/KlCqi5EwFLazzNjdEQqB5ofKiSp0K59Y22On9P3nyYt/bjo5E/8wlxtfJRJRPSNF8BKNdKT5/r/QcBO/4Em3mgggZNuz8V7kfmKo1RnU1FotI4vTf5l61H8qQRViVH84zu4JhiUTgCqzWPKgCeFTSUanJoLitFBuuX0Wo0Ux46ad8V82fkT6GZ0mk7mSn2R9lquUrfziNg6jJK6aiC9X6GTJ6G1gnBKPD4p4HRn6ybgjVkeeZHrslheAtegsDqmREFaH7WfKX3tcId4b02RqND7+aBp/3oPWfkD0koUxEFewZL11lzYXRmgFpJwr/dZ64SD1n3SEc2F22E7sPPFyK5EgayFNwijM4VseYpJU6B3MLbSJ8pPnppPXztHg2xquClPRMhowqY4zdKuxeEzPn2lW3vtp1neE45vm/GtSpAF/uttLX40YpVwx65uZVepJ/KEqHD2P3HXqMfbdnkxwYzmtemipxjy4H+MsHcL1EO23fDlnhsJSiYI7tNmhfVs3WpAOBmrEu2iWB+++KaamiUaQXzGOEpuhacUmCU7oj+jJew3nRrb+QrPGNecw3M2f2lWlV6786JvnnxxZrSHfH4XnnVCTwvnbSe7gJFCiGzMNrodl5NEA2HvUqY267T8I2ia3xEnyuYkbA++X5zdEtPd2aWVoQqoTc86b6v9z4FU3NpFLSp8RoJOJ/qN3f/YbOg9D6MtUrPpyI2kSrCK8n6ZLWRsK58eqPT6JLF6xwdrao9L3Pj5NltcZNdgR1ZqqiV9eYxYa7ZOlXxuh1Xo6XjfF97FtlZ8jTnrrWq7k1NONx+k0CBmzrv+SoPhjWP9Ya+OYGnnqkiWq1aix/GK20N3XivPlviXKOL56Vlvq6f9h3Wns2fjihzWHiPt7Qw7/touGx9u6HFjy84jg2mGr/uQnk5J67bPhlRT+39AFq9Zem8qfmmtXiYK37g18JsK70JRTd5tfIPsK20CK+PXncpYLXznj9QocoaCR2tAtFPc3SrZas3+9Cs9I4BplX/A/n58YvoGoD6vOeNiuakpUOthszWHIfizPu84ehXDR5o3zd6rSHdh/sa7eaiR0G0cwbXJtDnZnEobUkLV4W0RAFyuAFZ6j/ntSpfxrmG2N71rOEy3PYIoLlnyapWwQGkGo9acJSWTnNeW6Pd81wLxZJRzdEa/mmCIj83gX+mzKLk1krT02m5Nk+jZd65MbWcqLTm6ESfKR+9ujk6mAirYWRJ79SQXstzc2FUc32vt/SAi8FZBBjUy7evudTbWs97lycI50NgrwW2KkgBqpX31pfWe7HmX563zt/bL+KVNlcrbsV+I2AysfdOr0BjLtJqBRoptrQyLuXTCI82Vr0y4v1FkFpvjv5cQZknH0WUbQrxrVp6hH4WHc+fXusavJYSdJw/33/n0wqe7xd5x6mVLYD2luFeEH+t9CPhUaNIxCg8f3atObl1g8PG+jYE5sgvwpQBy1WASXjJDLdZuU55rOVela31HLmRn6InKj/O5R2u+bpnO68kHMWQVXAIhBeU+o3cU4uH9ggNxmhVnB09ssKryfasYMKEFhgoPbO6VUMBFIyl1bvwEg3Vg8uFSSPSjQrmMUAi7bODCfOalwA0UgSoMjAMBRTadhDeCKGlw/pYSx+iiNKOnOPhxldmNAqB2fuSek4BmpsQNCukAQKWD30NmQZUqQVoliGMywQR+bWSZ545nfQ+63op7ZNpz1uTGmMIacUACs4EtDb3sZ6rjMjKdebcw+8yAZYvDkY+8JoSQIU9N0BVtiWATNmbHfnAawpM7qvQFgIzi6K5uZd6RsqwqLMEkF0fcPnw6q8Jt9ke6oui6IJ6KaBqdCnmtNhJD609X+J54KauidfRdadXjG6l4aVYdXZB4ufMvNalTdbyQ/njI+fqt7FTgLXcZ0spE1S1bMujSyhGlRQ9x+CsOqeCzlpqGV+AGCp2WoDUPkzG0iUj/BKa9C2IeWm2kkxZkRZDs7BKakgMq8f7X20VSD0nDLCYzQAV8PxaEQ9YA6js6BhvpINEnu5C60cFI+v88OF0yv9+W9rZAdTWrbqI5/mx8GKVKmBmVd5749ffVWYBkUmHpUyGlxK+UJx5gy1juCa8Ze0gefC4hjZz2NyZIEIf/YQ+m8wErEYrc+cI4fFIn1MB14DleaQKxnCgoQBCn+VTYjjd7wadFJAGdPRdaMljzFtRshUh5rG03CMcAwrLHooVwNADb+cZB33N+2w8tOmTWNg83tJbe2g1ALU9VLuPBen4q5MlMP09wiGKBzyAKQGsYOs5IBrw0FgybAvfsS/sVMHHPo/84QtRQLdB4FXqjXq+mMc1GOrqqtYeg+j9eUMEwLWPJVf26G6VfTN3i9YOWIW/8V9wrQXZ7Mq2orDukHwsekfdnlsS/MifQD2WspecZ/avgiyp+CVoX7p3hr53XQKQKM1L9c6z8kozAqxzyVC2RtpUsIu+jzTlPkd7SeH2JLfteo2i5+U2yxo9UNCRPfBO5+/4c3Svz6Z6bQEYYQGWd6EceC3XHHPj2YhYcmcJg9m/n726fneOD+MVvunPL+a4d7ZhdU4Z0WcYwwIbEq/fghFFJjB+7xUN+6Jz4XnvjVfXLwNsvB2apQHCWyCf3p7Mi+Isha2dDuFxIOzevA2rK0aWQqTBS+9qhdaKRbws1vC2Qy69dbnylurzXLXxDVdupVpz9CdXAAAAAElFTkSuQmCC"/>
+                        </defs>
+                    </svg>
+
+
+                </div>
+
+                <div class="text-star-block">
+                    <h3>5</h3>
+                    <p>star standart</p>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="footer-mob-logo">
+            <img src="img/footer-logo.png" alt="">
+        </div>
+
+        <div class="mob-footer-underline">
+            <svg width="374" height="13" viewBox="0 0 374 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 10.2236C13.353 10.2236 13.353 2.99984 26.7143 2.99984C40.0673 2.99984 40.0673 10.2236 53.4286 10.2236C66.7816 10.2236 66.7816 2.99984 80.1429 2.99984C93.4958 2.99984 93.4958 10.2236 106.857 10.2236C120.218 10.2236 120.218 2.99984 133.571 2.99984C146.924 2.99984 146.924 10.2236 160.286 10.2236C173.639 10.2236 173.639 2.99984 187 2.99984C200.353 2.99984 200.353 10.2236 213.714 10.2236C227.067 10.2236 227.067 2.99984 240.429 2.99984C253.79 2.99984 253.79 10.2236 267.143 10.2236C280.504 10.2236 280.504 2.99984 293.857 2.99984C307.218 2.99984 307.218 10.2236 320.571 10.2236C333.933 10.2236 333.933 2.99984 347.286 2.99984C360.647 2.99984 360.647 10.2236 374 10.2236" stroke="#58516B" stroke-width="5" stroke-miterlimit="10"/>
+            </svg>
+        </div>
+
+        <div class="mob-footer-content">
+            <div class="footer-content-wrap">
+                <div class="footer-contact">
+                    <div class="contact-us">
+                        <h2>Contact us</h2>
+                    </div>
+                    <p><bold>Praga.at</bold>
+                        <br>
+                        Krakowska 20/29, 30-300 Kaprun, Austria</p>
+
+                    <div class="contact-tel">
+                        <a href="tel:+48798616989">
+                            <div class="elipse">
+                                <img src="img/tel.svg" alt="">
+                            </div>
+
+                            +43 600 400 500</a>
+
+                    </div>
+
+                    <div class="contact-mail">
+                        <a href="mailto:contact@apartments.com" style="color: #ec7180; font-size: 14px">
+                            <div class="elipse">
+                                <img src="img/footer-mail.svg" alt="">
+                            </div>
+                            contact@apartments.com</a>
+                    </div>
+                </div>
+
+
+                <div class="footer-menu">
+                    <h2>Menu</h2>
+                    <br>
+                    <div class="links">
+                        <div class="footer-links-left-column" style="width: 152px;">
+                            <a href="#">Apartments</a>
+                            <a href="#">Rental</a>
+                            <a href="#">Gallery</a>
+                            <a href="#">Opinions</a>
+                            <a href="#">Property management</a>
+                        </div>
+
+                        <div class="footer-links-right-column" style="width: 90px;">
+                            <a href="#">Tips for trips</a>
+                            <a href="#">Restaurant</a>
+                            <a href="#">About us</a>
+                            <a href="#">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-contact-form">
+                    <h2>Contact form</h2>
+                    <br>
+
+                    <form action="https://formspree.io/f/mlearrkr" method="POST">
+                        <label for="name">
+                        </label>
+                        <input type="text" id="name" name="name" placeholder="Name">
+
+                        <label for="email">
+                        </label>
+                        <input type="text" id="email" name="email" placeholder="Email">
+
+                        <label for="user_post_textarea">
+                        </label>
+                        <textarea class='textField' type='text' name='message' value='' id="user_post_textarea" onkeyup='charLimit(this, 237);' placeholder="Message"></textarea>
+
+                        <input type="submit" value="" id="form-submit">
+
+                    </form>
+
+                </div>
+
+
+            </div>
+
+            <div class="mob-footer-underline" style="margin-top: 40px;">
+                <svg width="374" height="13" viewBox="0 0 374 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 10.2236C13.353 10.2236 13.353 2.99984 26.7143 2.99984C40.0673 2.99984 40.0673 10.2236 53.4286 10.2236C66.7816 10.2236 66.7816 2.99984 80.1429 2.99984C93.4958 2.99984 93.4958 10.2236 106.857 10.2236C120.218 10.2236 120.218 2.99984 133.571 2.99984C146.924 2.99984 146.924 10.2236 160.286 10.2236C173.639 10.2236 173.639 2.99984 187 2.99984C200.353 2.99984 200.353 10.2236 213.714 10.2236C227.067 10.2236 227.067 2.99984 240.429 2.99984C253.79 2.99984 253.79 10.2236 267.143 10.2236C280.504 10.2236 280.504 2.99984 293.857 2.99984C307.218 2.99984 307.218 10.2236 320.571 10.2236C333.933 10.2236 333.933 2.99984 347.286 2.99984C360.647 2.99984 360.647 10.2236 374 10.2236" stroke="#ED7080" stroke-width="5" stroke-miterlimit="10"/>
+                </svg>
+            </div>
+
+            <div class="footer-copyright">-->
+                <div class="text-copyright">
+                    <p>Copyright © 2021 by Hotelwsieci</p>
+
+                    <svg width="70" height="31" viewBox="0 0 70 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M26.0678 8.27319C26.035 7.9842 25.8709 7.72768 25.6214 7.57182L14.0269 0.434764L13.5476 0.142528C13.2358 -0.0522961 12.8353 -0.045802 12.5267 0.152269L12.0672 0.441258L0.462859 7.57182C0.18383 7.74067 0.0131307 8.04914 0.0131307 8.3771C0.0131307 8.40957 0.00328269 8.51997 0 8.69531V17.6929C0.00328269 22.3298 3.82105 26.1029 8.49231 26.1061H11.7389C13.61 26.6743 15.2153 28.0381 16.1278 29.7396L16.1377 29.7591L16.141 29.7623L16.1836 29.824L16.1968 29.8532C16.2001 29.8565 16.2001 29.863 16.2066 29.8662C16.3117 30.0221 16.4495 30.1584 16.6268 30.2591C16.8074 30.3695 17.0339 30.4344 17.2669 30.4344C17.6149 30.4344 17.9432 30.2916 18.1664 30.0708C18.3962 29.8435 18.5406 29.5318 18.5439 29.2006V29.1778L18.557 26.0444C20.6153 25.8139 22.4536 24.8462 23.7929 23.4273C25.211 21.9271 26.0875 19.9074 26.0875 17.6962V8.69531C26.0941 8.51997 26.0744 8.38034 26.0678 8.27319ZM24.1803 17.6897C24.1803 19.4041 23.504 20.9562 22.4043 22.1219C21.3046 23.2909 19.7815 24.0572 18.081 24.1806C18.0482 24.1838 18.0154 24.1838 17.9793 24.1936C17.976 24.1968 17.9694 24.1968 17.9596 24.1968H17.9563C17.6543 24.2455 17.372 24.3819 17.152 24.5767C16.8993 24.804 16.7253 25.106 16.6629 25.4437C16.6531 25.4956 16.6498 25.5573 16.6498 25.6125L16.6465 27.1452C15.4779 25.7911 13.9284 24.7553 12.1558 24.2423C12.0704 24.2131 11.9785 24.2033 11.8866 24.2033H8.49231C6.68683 24.2033 5.04549 23.4695 3.84731 22.2843C2.65569 21.0991 1.91381 19.4756 1.91381 17.6832V8.91286L13.0454 2.06804L24.1803 8.91936V17.6897Z" fill="#EB5B4B"/>
+                        <path d="M9.59518 9.69727H7.34326V19.4125H9.59518V13.9185H16.4954V19.4125H18.7539V9.69727H16.4954V12.2332H9.59518V9.69727Z" fill="#EB5B4B"/>
+                        <path d="M39.6317 14.5434V11.0301H36.4541V14.5434H34.0249V5.56523L36.4541 5.4873V9.14351H39.6317V5.56523H42.0609V14.5434H39.6317Z" fill="white"/>
+                        <path d="M47.0145 14.6897C46.3186 14.6897 45.6981 14.5663 45.1499 14.3196C44.6017 14.0728 44.175 13.6994 43.8631 13.1961C43.5513 12.6928 43.397 12.0628 43.397 11.3063C43.397 10.5854 43.5611 9.97173 43.8894 9.47168C44.2176 8.96838 44.6641 8.58523 45.2189 8.31572C45.7769 8.04622 46.3908 7.91309 47.0703 7.91309C47.7826 7.91309 48.4129 8.04297 48.9644 8.30273C49.5159 8.5625 49.9492 8.9489 50.2643 9.45869C50.5795 9.96848 50.7403 10.6082 50.7403 11.3745C50.7403 12.0856 50.5729 12.6895 50.2381 13.1831C49.9033 13.6766 49.4568 14.0501 48.8955 14.3066C48.3341 14.5631 47.7071 14.6897 47.0145 14.6897ZM47.0408 12.735C47.3001 12.735 47.5167 12.6863 47.6874 12.5824C47.8614 12.4817 47.9927 12.3291 48.0879 12.1278C48.1831 11.9265 48.2258 11.6732 48.2258 11.3745C48.2258 11.0822 48.1798 10.8257 48.0912 10.6017C48.0026 10.3776 47.8746 10.199 47.7104 10.0659C47.5463 9.93276 47.3395 9.86782 47.09 9.86782C46.8405 9.86782 46.6271 9.92627 46.4499 10.0399C46.2726 10.1536 46.1347 10.3192 46.0428 10.5367C45.9509 10.7543 45.9049 11.0108 45.9049 11.3095C45.9049 11.592 45.9509 11.8388 46.0395 12.0564C46.1282 12.2707 46.2562 12.4395 46.4269 12.5564C46.5943 12.6765 46.8011 12.735 47.0408 12.735Z" fill="white"/>
+                        <path d="M56.4914 10.2922H54.5678V11.8768C54.5678 12.1398 54.6367 12.3508 54.7746 12.5034C54.9124 12.6561 55.0963 12.734 55.3293 12.734C55.4639 12.734 55.6149 12.7145 55.7823 12.6755C55.953 12.6366 56.1106 12.5716 56.2649 12.484L56.9575 14.1205C56.8492 14.2082 56.6982 14.2958 56.498 14.3835C56.2977 14.4712 56.0811 14.5458 55.8447 14.601C55.6084 14.6562 55.3851 14.6887 55.1718 14.6887C54.6564 14.6887 54.1673 14.5946 53.7044 14.403C53.2415 14.2146 52.864 13.9322 52.5752 13.5522C52.2863 13.1756 52.1418 12.7015 52.1418 12.1398V10.2922H51.1406V8.40564H52.1418V6.67495L54.571 6.34375V8.40239H56.2682L56.4914 10.2922Z" fill="white"/>
+                        <path d="M60.0042 11.9421C60.0666 12.1174 60.1585 12.2733 60.2833 12.4031C60.408 12.5363 60.5689 12.6369 60.7625 12.7084C60.9595 12.7766 61.1926 12.8155 61.4716 12.8155C61.8622 12.8155 62.2069 12.7668 62.5057 12.6694C62.8044 12.572 63.0506 12.4746 63.2475 12.3804L63.9271 14.004C63.7564 14.1273 63.5298 14.241 63.2475 14.3481C62.9619 14.4553 62.6468 14.5365 62.2988 14.5982C61.9509 14.6599 61.5963 14.6923 61.232 14.6923C60.4934 14.6923 59.8303 14.5657 59.2427 14.3092C58.6551 14.0527 58.1955 13.676 57.8606 13.1792C57.5258 12.6824 57.3584 12.0719 57.3584 11.3511C57.3584 10.6302 57.5127 10.0133 57.818 9.50352C58.1265 8.99373 58.5434 8.60083 59.072 8.32808C59.6005 8.05532 60.1914 7.91895 60.8413 7.91895C61.534 7.91895 62.1117 8.07156 62.5713 8.37354C63.0276 8.67876 63.3723 9.0814 63.5988 9.58794C63.8253 10.0945 63.9402 10.6465 63.9402 11.2439V11.9453H60.0042V11.9421ZM61.6193 10.7536C61.6193 10.6302 61.5898 10.4971 61.5307 10.3575C61.4749 10.2179 61.383 10.0945 61.2648 9.99382C61.1433 9.89316 60.9825 9.84121 60.7757 9.84121C60.6345 9.84121 60.4966 9.88342 60.3621 9.96785C60.2275 10.0523 60.1224 10.1627 60.0469 10.299C59.9714 10.4354 59.932 10.588 59.932 10.7536H61.6193Z" fill="white"/>
+                        <path d="M65.0103 14.543V5.36682L67.4394 5.2207V14.543H65.0103Z" fill="white"/>
+                        <path d="M39.2969 25.1061L38.2826 21.7908L37.2813 25.1061H35.0655L33.0894 19.099L35.3314 18.4658L36.267 22.3363L37.1599 18.7061H39.4414L40.4032 22.3363L41.2435 18.7061H43.6596L41.5127 25.1093H39.2969V25.1061Z" fill="white"/>
+                        <path d="M44.769 22.9825C44.9463 23.0637 45.1498 23.1351 45.3763 23.2001C45.6028 23.2683 45.8293 23.3202 46.0493 23.3657C46.2725 23.4111 46.4596 23.4339 46.6106 23.4339C46.7189 23.4339 46.8141 23.4209 46.8995 23.3949C46.9815 23.3689 47.0505 23.3332 47.0997 23.2877C47.1489 23.2423 47.1719 23.1936 47.1719 23.1416C47.1719 23.1059 47.1457 23.0669 47.0931 23.015C47.0406 22.9663 46.9651 22.9176 46.8666 22.8689C46.7682 22.8202 46.6565 22.778 46.5318 22.7422C46.1773 22.6188 45.8195 22.4662 45.4649 22.2876C45.1104 22.1058 44.8117 21.8818 44.5786 21.6058C44.3423 21.333 44.2241 21.0051 44.2241 20.6154C44.2241 19.9465 44.4768 19.4237 44.9857 19.0438C45.4912 18.6639 46.197 18.4756 47.0964 18.4756C47.2737 18.4756 47.5068 18.4918 47.7989 18.5275C48.0878 18.5633 48.3898 18.6282 48.6984 18.7256C49.007 18.823 49.2893 18.9691 49.5387 19.1607L48.8592 20.6803C48.5999 20.5667 48.3274 20.4725 48.0451 20.4043C47.7595 20.3329 47.5035 20.2972 47.2704 20.2972C47.0734 20.2972 46.9159 20.3232 46.7911 20.3751C46.6664 20.4271 46.604 20.4985 46.604 20.5862C46.604 20.6381 46.6697 20.6998 46.7977 20.7713C46.9257 20.8427 47.0899 20.9141 47.2835 20.9823C47.6381 21.1057 47.9926 21.2583 48.3373 21.4369C48.6852 21.6187 48.9741 21.8428 49.2039 22.1123C49.4337 22.3818 49.5519 22.713 49.5519 23.1092C49.5519 23.7781 49.3287 24.3008 48.8789 24.6807C48.4292 25.0606 47.7562 25.249 46.8568 25.249C46.6795 25.249 46.4169 25.2262 46.0755 25.1808C45.7341 25.1353 45.3796 25.0606 45.0152 24.9502C44.6508 24.8398 44.3423 24.6872 44.0928 24.4957L44.769 22.9825Z" fill="white"/>
+                        <path d="M50.7633 17.4498C50.504 17.1933 50.376 16.8913 50.376 16.5374C50.376 16.177 50.504 15.8652 50.7633 15.6055C51.0227 15.3457 51.328 15.2158 51.6825 15.2158C52.0469 15.2158 52.362 15.3457 52.6246 15.6055C52.8872 15.8652 53.0185 16.177 53.0185 16.5374C53.0185 16.8881 52.8872 17.1933 52.6246 17.4498C52.362 17.7063 52.0469 17.833 51.6825 17.833C51.328 17.833 51.0227 17.7031 50.7633 17.4498ZM50.4843 25.1064V18.7032H52.9135V25.1064H50.4843Z" fill="white"/>
+                        <path d="M56.4915 22.5046C56.5539 22.6799 56.6458 22.8358 56.7706 22.9656C56.8953 23.0988 57.0562 23.1994 57.2498 23.2709C57.4468 23.3391 57.6799 23.378 57.9589 23.378C58.3495 23.378 58.6942 23.3293 58.993 23.2319C59.2917 23.1345 59.5379 23.0371 59.7348 22.9429L60.4144 24.5665C60.2437 24.6898 60.0172 24.8035 59.7348 24.9106C59.4492 25.0178 59.1341 25.099 58.7861 25.1607C58.4382 25.2224 58.0837 25.2548 57.7193 25.2548C56.9807 25.2548 56.3176 25.1282 55.73 24.8717C55.1424 24.6152 54.6828 24.2385 54.348 23.7417C54.0131 23.2449 53.8457 22.6344 53.8457 21.9136C53.8457 21.1927 54 20.5758 54.3053 20.066C54.6138 19.5562 55.0308 19.1633 55.5593 18.8906C56.0878 18.6178 56.6787 18.4814 57.3286 18.4814C58.0213 18.4814 58.599 18.6308 59.0586 18.936C59.5149 19.238 59.8596 19.6439 60.0861 20.1504C60.3126 20.657 60.4275 21.209 60.4275 21.8064V22.5078H56.4915V22.5046ZM58.1066 21.3161C58.1066 21.1927 58.0771 21.0596 58.018 20.92C57.9622 20.7804 57.8703 20.657 57.7521 20.5563C57.6306 20.4557 57.4698 20.407 57.263 20.407C57.1218 20.407 56.9839 20.4492 56.8494 20.5336C56.7148 20.618 56.6097 20.7284 56.5342 20.8648C56.4587 21.0012 56.4193 21.1538 56.4193 21.3194H58.1066V21.3161Z" fill="white"/>
+                        <path d="M66.7171 24.6057C66.4676 24.8006 66.205 24.9434 65.9292 25.0344C65.6535 25.1253 65.3909 25.1837 65.1414 25.2129C64.8919 25.2389 64.6785 25.2519 64.5013 25.2519C63.8053 25.2519 63.1915 25.122 62.6597 24.8623C62.1246 24.6025 61.7077 24.2226 61.4123 23.7258C61.1168 23.229 60.9658 22.6218 60.9658 21.9107C60.9658 21.1898 61.1135 20.5729 61.4123 20.0631C61.711 19.5533 62.1279 19.1604 62.6597 18.8876C63.1915 18.6149 63.8053 18.4785 64.5013 18.4785C64.6785 18.4785 64.8919 18.4915 65.1414 18.5175C65.3909 18.5435 65.6535 18.6052 65.9292 18.6961C66.205 18.7902 66.4676 18.9331 66.7171 19.1247L66.0376 20.7742C65.7782 20.6411 65.5583 20.5534 65.3712 20.5047C65.1841 20.456 64.974 20.4333 64.7442 20.4333C64.5308 20.4333 64.3273 20.4917 64.1303 20.6118C63.9334 20.732 63.7758 20.9008 63.6543 21.1216C63.5329 21.3424 63.4738 21.6054 63.4738 21.9139C63.4738 22.2126 63.5329 22.4659 63.6543 22.6737C63.7758 22.8815 63.9334 23.0374 64.1303 23.1413C64.3273 23.2452 64.5308 23.3004 64.7442 23.3004C64.9576 23.3004 65.1611 23.2744 65.3581 23.229C65.555 23.1803 65.7815 23.0894 66.0376 22.9595L66.7171 24.6057Z" fill="white"/>
+                        <path d="M67.7448 17.4498C67.4854 17.1933 67.3574 16.8913 67.3574 16.5374C67.3574 16.177 67.4854 15.8652 67.7448 15.6055C68.0041 15.3457 68.3094 15.2158 68.6639 15.2158C69.0283 15.2158 69.3434 15.3457 69.6061 15.6055C69.8687 15.8652 70 16.177 70 16.5374C70 16.8881 69.8687 17.1933 69.6061 17.4498C69.3434 17.7063 69.0283 17.833 68.6639 17.833C68.3094 17.833 68.0041 17.7031 67.7448 17.4498ZM67.4658 25.1064V18.7032H69.8949V25.1064H67.4658Z" fill="white"/>
+                    </svg>
+                </div>
+
+
+
+                <div class="footer-social-media">
+                    <a href="#">
+                        <img src="img/insta.svg" alt="">
+                    </a>
+
+                    <a href="#">
+                        <img src="img/fb.svg" alt="">
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="mob-menu">
+            <div class="mob-menu-wrap">
+                <a href="#">Apartments</a>
+                <a href="#">Restaurant</a>
+                <a href="#">Gallery</a>
+                <a href="#">Tips for trips</a>
+                <a href="#">Special Offers</a>
+                <a href="#">Contact</a>
+
+                <ul id="mob_menu_lang">
+                    <li onclick="to_en();" class="en">en</li>
+                    <li onclick="to_ru();" class="ru">ru</li>
+                    <li onclick="to_de();" class="de">de</li>
+                </ul>
+
+                <div class="mob-menu-social">
+                    <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M26.8066 22.7271C26.8066 25.1294 24.8783 27.0772 22.5 27.0772C20.1217 27.0772 18.1934 25.1294 18.1934 22.7271C18.1934 20.3248 20.1217 18.377 22.5 18.377C24.8783 18.377 26.8066 20.3248 26.8066 22.7271Z" fill="#ED7180"/>
+                        <path d="M32.5713 15.0298C32.3639 14.4634 32.0343 13.9503 31.6045 13.5295C31.1879 13.0962 30.6799 12.7624 30.1191 12.5529C29.6639 12.3745 28.9801 12.1614 27.7206 12.1037C26.3583 12.0407 25.9496 12.0273 22.4999 12.0273C19.0502 12.0273 18.6415 12.0407 17.2792 12.1037C16.0197 12.1623 15.3351 12.3745 14.8807 12.5529C14.319 12.7624 13.8119 13.0953 13.3953 13.5295C12.9664 13.9503 12.6359 14.4634 12.4285 15.0298C12.2519 15.4897 12.0409 16.1804 11.9838 17.4535C11.9214 18.8295 11.9082 19.2424 11.9082 22.7269C11.9082 26.2115 11.9214 26.6243 11.9838 28.0004C12.0409 29.2725 12.2519 29.9632 12.4285 30.4231C12.6359 30.9904 12.9655 31.5027 13.3953 31.9235C13.8119 32.3567 14.3199 32.6905 14.8807 32.9C15.3359 33.0794 16.0197 33.2915 17.2801 33.3493C18.6424 33.4123 19.0502 33.4256 22.5008 33.4256C25.9514 33.4256 26.3601 33.4123 27.7215 33.3493C28.981 33.2915 29.6656 33.0785 30.1209 32.9C31.2477 32.4606 32.138 31.5613 32.573 30.4231C32.7497 29.9632 32.9606 29.2725 33.0178 28.0004C33.0802 26.6243 33.0934 26.2115 33.0934 22.7269C33.0934 19.2424 33.0802 18.8295 33.0178 17.4535C32.9589 16.1813 32.7488 15.4897 32.5713 15.0298ZM22.4999 29.4279C18.8357 29.4279 15.865 26.4281 15.865 22.7269C15.865 19.0257 18.8357 16.0259 22.4999 16.0259C26.1641 16.0259 29.1339 19.0257 29.1339 22.7269C29.1339 26.4281 26.1641 29.4279 22.4999 29.4279ZM29.3967 17.3265C28.5406 17.3265 27.8463 16.6252 27.8463 15.7605C27.8463 14.8958 28.5406 14.1944 29.3967 14.1944C30.2527 14.1944 30.9471 14.8958 30.9471 15.7605C30.9471 16.6252 30.2527 17.3265 29.3967 17.3265Z" fill="#ED7180"/>
+                        <path d="M22.5 0C10.0758 0 0 10.1776 0 22.7273C0 35.277 10.0758 45.4545 22.5 45.4545C34.9242 45.4545 45 35.277 45 22.7273C45 10.1776 34.9242 0 22.5 0ZM35.3417 28.1081C35.2793 29.4975 35.0605 30.4457 34.7414 31.2757C34.0699 33.0291 32.698 34.415 30.963 35.0923C30.1412 35.4146 29.2017 35.6357 27.8271 35.6987C26.4489 35.7626 26.0095 35.7777 22.5 35.7777C18.9905 35.7777 18.5511 35.7626 17.173 35.6987C15.7983 35.6357 14.8588 35.4146 14.037 35.0923C13.1748 34.7647 12.3935 34.2507 11.7483 33.5867C11.0909 32.935 10.5829 32.1458 10.2586 31.2749C9.93955 30.4448 9.7207 29.4957 9.6583 28.1072C9.59502 26.7161 9.58008 26.2713 9.58008 22.7273C9.58008 19.1832 9.59502 18.7385 9.6583 17.3464C9.7207 15.957 9.93955 15.0089 10.2586 14.1788C10.5829 13.3079 11.0918 12.5186 11.7492 11.867C12.3943 11.2029 13.1757 10.6889 14.0379 10.3613C14.8597 10.0391 15.7992 9.818 17.1738 9.75497C18.552 9.69194 18.9914 9.67596 22.5009 9.67596C26.0104 9.67596 26.4498 9.69105 27.8279 9.75497C29.2034 9.818 30.1421 10.0391 30.9639 10.3604C31.8261 10.688 32.6074 11.2021 33.2525 11.8661C33.91 12.5178 34.4188 13.307 34.7423 14.1779C35.0622 15.008 35.2802 15.957 35.3435 17.3455C35.4059 18.7376 35.4208 19.1815 35.4208 22.7264C35.4208 26.2713 35.405 26.7161 35.3417 28.1081Z" fill="#ED7180"/>
+                    </svg>
+
+                    <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M45 22.7273C45 10.174 34.9277 0 22.5 0C10.0723 0 0 10.174 0 22.7273C0 35.2805 10.0723 45.4545 22.5 45.4545C22.6318 45.4545 22.7637 45.4545 22.8955 45.4457V27.761H18.0615V22.0703H22.8955V17.88C22.8955 13.0238 25.8311 10.3782 30.1201 10.3782C32.1768 10.3782 33.9434 10.5291 34.4531 10.6001V15.6783H31.5C29.1709 15.6783 28.7139 16.7969 28.7139 18.4393V22.0614H34.2949L33.5654 27.7521H28.7139V44.5756C38.1182 41.8501 45 33.1055 45 22.7273Z" fill="#ED7180"/>
+                    </svg>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-mob-nav">
+            <div class="mob-nav">
+                <div class="mob-nav-map">
+                    <svg width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.1951 4.53156C18.2015 3.0913 16.9168 1.95715 15.4364 1.18433C13.961F 0.411504 12.2949 0 10.5435 0C8.79213 0 7.12604 0.411504 5.65065 1.18433C4.17526 1.95715 2.88554 3.0913 1.89191 4.53156C0.642347 6.33816 0 8.45088 0 10.5686C0 11.8081 0.220807 13.0477 0.667439 14.232C0.993631 15.1152 1.51052 15.9683 2.19803 16.7663L9.74561 25.6286C9.94634 25.8645 10.2374 26 10.5435 26C10.8496 26 11.1407 25.8645 11.3414 25.6286L18.884 16.7663C19.5765 15.9633 20.0934 15.1102 20.4146 14.237C20.8612 13.0527 21.082 11.8081 21.082 10.5686C21.0871 8.45088 20.4447 6.33816 19.1951 4.53156ZM18.4574 13.4993C18.2216 14.1417 17.8302 14.779 17.2982 15.3963L17.2932 15.4013L10.5435 23.3302L3.78884 15.4013C3.2569 14.784 2.87049 14.1467 2.62961 13.4993C2.27331 12.5559 2.09766 11.5622 2.09766 10.5736C2.09766 8.87744 2.61455 7.18124 3.61822 5.73094C4.41614 4.57672 5.4449 3.67342 6.6242 3.05115C7.80351 2.43389 9.13839 2.10268 10.5435 2.10268C11.9487 2.10268 13.2835 2.43389 14.4628 3.05115C15.6422 3.6684 16.6709 4.57672 17.4688 5.73094C18.4725 7.18124 18.9894 8.87242 18.9894 10.5736C18.9894 11.5572 18.8137 12.5509 18.4574 13.4993Z" fill="#262037"/>
+                        <path d="M10.5433 5.3291C9.11309 5.3291 7.81836 5.91123 6.87993 6.84966C5.9415 7.78809 5.35938 9.08282 5.35938 10.513C5.35938 11.9433 5.9415 13.238 6.87993 14.1764C7.81836 15.1149 9.11309 15.697 10.5433 15.697C11.9735 15.697 13.2683 15.1149 14.2067 14.1764C15.1451 13.238 15.7273 11.9433 15.7273 10.513C15.7273 9.08282 15.1451 7.78809 14.2067 6.84966C13.2683 5.91123 11.9735 5.3291 10.5433 5.3291ZM8.36536 8.33007C8.92239 7.77303 9.69522 7.42677 10.5433 7.42677C11.3914 7.42677 12.1642 7.77303 12.7213 8.33007C13.2783 8.8871 13.6246 9.65993 13.6246 10.508C13.6246 11.3561 13.2783 12.1289 12.7213 12.686C12.1642 13.243 11.3914 13.5893 10.5433 13.5893C9.69522 13.5893 8.92239 13.243 8.36536 12.686C7.80832 12.1289 7.46206 11.3561 7.46206 10.508C7.46206 9.65993 7.80832 8.89212 8.36536 8.33007Z" fill="#262037"/>
+                    </svg>
+                </div>
+            </div>
+
+            <a href="#">Booking online
+                <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.619 23.6816L18.4552 17.2466C20.0416 15.3526 20.9098 12.9749 20.9098 10.4968C20.9098 4.70985 16.2187 0 10.4549 0C4.69107 0 0 4.70985 0 10.4968C0 16.2837 4.69107 20.9935 10.4549 20.9935C12.6186 20.9935 14.6823 20.3363 16.446 19.095L22.6553 25.5801C22.9144 25.8494 23.2644 26 23.6372 26C23.9917 26 24.3281 25.8631 24.5827 25.6166C25.1236 25.0918 25.1418 24.2247 24.619 23.6816ZM10.4549 2.73828C14.7142 2.73828 18.1825 6.22047 18.1825 10.4968C18.1825 14.773 14.7142 18.2552 10.4549 18.2552C6.19567 18.2552 2.72737 14.773 2.72737 10.4968C2.72737 6.22047 6.19567 2.73828 10.4549 2.73828Z" fill="#ED7180"/>
+                </svg>
+            </a>
+
+
+            <div class="mob-nav-menu">
+                <button onclick="showMobMenu()" class="show-mob-menu-btn">
+                    <svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="26" height="3" rx="1.5" fill="#262037"/>
+                        <rect y="6" width="26" height="3" rx="1.5" fill="#262037"/>
+                        <rect y="12" width="26" height="3" rx="1.5" fill="#262037"/>
+                    </svg>
+
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</footer>
+
+<script src="core.js">
+</script>
+
+</body>
+</html>
